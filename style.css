@@ -1,0 +1,34 @@
+/* Define o estilo padrão do corpo do site */
+body {
+  font-family: Arial, sans-serif; /* Fonte limpa e fácil de ler */
+  margin: 0;                      /* Remove margens externas */
+  padding: 0;                     /* Remove espaçamento interno */
+}
+
+/* Estilo para o cabeçalho e rodapé */
+header, footer {
+  background-color: #a83279;  /* Cor de fundo roxa */
+  color: white;               /* Texto branco */
+  text-align: center;         /* Centraliza o texto */
+  padding: 20px;              /* Espaçamento interno */
+}
+
+/* Estilo dos links do menu de navegação */
+nav a {
+  color: white;              /* Links em branco */
+  margin: 0 10px;            /* Espaçamento lateral entre os links */
+  text-decoration: none;    /* Remove o sublinhado */
+}
+
+/* Estilo da seção de produtos */
+#produtos {
+  padding: 20px; /* Espaço interno em volta dos produtos */
+}
+
+/* Estilo individual de cada bloco de produto */
+.produto {
+  border: 1px solid #ccc; /* Borda cinza clara */
+  padding: 10px;          /* Espaçamento interno */
+  margin-bottom: 15px;    /* Espaço entre os produtos */
+  max-width: 200px;       /* Largura máxima do bloco */
+}
