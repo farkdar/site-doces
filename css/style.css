@@ -432,14 +432,36 @@ footer {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    gap: 16px;
+    gap: 12px;
     padding: 10px;
   }
 
   .card-flip {
-    min-width: 180px;
-    height: 260px;
+    min-width: 160px;
+    height: 240px;
     flex-shrink: 0;
+  }
+
+  .card-front h3,
+  .card-front p {
+    font-size: 0.9rem;
+  }
+
+  .card-back {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .card-back h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .lista-sabores-1,
+  .lista-sabores-2,
+  .sabor-final {
+    font-size: 0.85rem;
+    padding-left: 8px;
   }
 
   .logo-text {
@@ -455,6 +477,7 @@ footer {
     max-width: 90%;
   }
 }
+
 
 /* Estilo padrão para telas maiores: layout em grade */
 @media (min-width: 601px) {
