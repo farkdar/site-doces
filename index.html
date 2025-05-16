@@ -1,78 +1,503 @@
 <!DOCTYPE html>
 <!-- Define o tipo de documento como HTML5 -->
 <html lang="pt-BR">
-<!-- Início do documento HTML com idioma definido como português do Brasil -->
+<!-- Início do documento HTML com idioma português brasileiro -->
 
 <head>
-  <meta charset="UTF-8">
-  <!-- Define o conjunto de caracteres como UTF-8 (acentuação etc.) -->
+    <meta charset="UTF-8">
+    <!-- Suporte a caracteres especiais (acentuação, cedilha etc.) -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Permite que o site se ajuste corretamente em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna o site responsivo em dispositivos móveis -->
 
-  <title>Florido Doces</title>
-  <!-- Título que aparece na aba do navegador -->
+    <title>Florido Doces</title>
+    <!-- Título exibido na aba do navegador -->
 
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Conecta o arquivo de estilo externo -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta o arquivo CSS externo -->
+
+    <!-- Importa fonte cursiva do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <!-- Importa o Font Awesome via CDN para usar ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
+
 <body>
-  <!-- Início do corpo do site -->
+    <!-- Corpo do site -->
 
-  <header>
-    <!-- Cabeçalho do site -->
-    <h1>Florido Doces</h1>
-    <!-- Título principal -->
 
-    <nav>
-      <!-- Menu de navegação com links para seções da página -->
-      <a href="#produtos">Produtos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+    <!-- Imagem de fundo com opacidade baixa -->
+    <div class="background-image"></div>
 
-  <section id="produtos">
-    <!-- Seção dos produtos -->
-    <h2>Nossos Doces</h2>
+    <header>
+        <!-- Cabeçalho principal com logo e nome -->
+        <div class="logo-container">
+            <!-- Container do logo e texto -->
+            <img src="image/logo.png" alt="Logo Florido Doces" class="logo">
+            <!-- Imagem do logo -->
+            <h1 class="logo-text">Florido Doces</h1>
+            <!-- Nome com fonte cursiva -->
+        </div>
 
-    <div class="produto">
-      <!-- Um bloco de produto -->
-      <img src="image/brigadeiro.jpg" alt="Brigadeiro" width="150">
-      <!-- Imagem do doce (você pode substituir pelo nome real do arquivo) -->
-      <h3>Brigadeiro</h3>
-      <!-- Nome do doce -->
-      <p>R$ 2,00 cada</p>
-      <!-- Preço do doce -->
+        <nav>
+            <!-- Menu de navegação para seções -->
+            <a href="index.html">Produtos</a>
+            <a href="contato.html">Contato</a> <!-- ✅ Atualizado para nova página -->
+        </nav>
+    </header>
+
+    <section id="Presentes">
+        <!-- Seção que exibe os produtos Presentes -->
+        <h2>Presentes</h2>
+
+        <div class="produtos-container">
+            <!-- Container para exibir os produtos lado a lado -->
+
+            <!-- Card: Caixa 4 Doces -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/cx4doces.png" alt="Caixa 4 Doces">
+                    <h3>Caixa 4 Doces</h3>
+                    <p>R$ 12,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <ul class="lista-sabores-1">
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Ninho</li>
+                        <li>Brigadeiro Branco</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Caixa 4 Doces', 12)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Card: Caixa 3 Corações -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/cx3coracoes.png" alt="Caixa 3 Corações">
+                    <h3>Caixa 3 Corações</h3>
+                    <p>R$ 50,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <ul class="lista-sabores-1">
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Ninho</li>
+                        <li>Brigadeiro Branco</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Caixa 3 Corações', 50)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Ovo Tradicional -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/fechado.jpg" alt="Ovo Tradicional">
+                    <h3>Ovo Tradicional</h3>
+                    <p>R$ 40,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Ovo de pascoa tradicional com uma surpresa dentro.</p>
+                    <h3>Sabores</h3>
+                    <ul class="lista-sabores-2">
+                        <li>Meio amargo</li>
+                        <li>Branco </li>
+                        <li>Duo</li>
+                    </ul>
+                    <h3>Supresa</h3>
+                    <ul class="lista-sabores-2">
+                        <li>Tortuguita</li>
+                        <li>Baton</li>
+                    </ul>
+
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo Tradicional', 40)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Adicione mais blocos .produto conforme necessário -->
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- Seção: Ovos de Colher 450g -->
+    <section id="ovos">
+        <h2>Ovos de Colher – 450g</h2>
+
+        <div class="produtos-container">
+
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/ovo-oreo.jpg" alt="Ovo de Colher Oreo">
+                    <h3>Ovo Oreo</h3>
+                    <p>R$ 70,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Ovo de colher com casca de chocolate branco envolto por pequenos pedaços de bolacha Oreo,
+                        recheado e confeitado com um cremoso brigadeiro de ninho e pedações de Oreo.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo Oreo', 70)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+            <!-- -------------------------------------------------------------- -->
+
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/caixa-trio.jpg" alt="Caixa Trio">
+                    <h3>Caixa Trio</h3>
+                    <p>R$ 80,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>3 ovos de colher de aproximadamente 200g cada.</p>
+
+                    <!-- Lista com duas colunas -->
+                    <ul class="lista-sabores-2">
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Ninho</li>
+                        <li>Kit Kat</li>
+                        <li>Oreo</li>
+                        <li>Uva Verde</li>
+                        <li>Maracujá</li>
+                    </ul>
+                    <ul class="sabor-final">
+                        <li>Ninho com Nutella</li>
+                    </ul>
+
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Caixa Trio', 80)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Ovo Brigadeiro -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/brigadeiro.jpg" alt="Ovo Brigadeiro">
+                    <h3>Ovo de Brigadeiro</h3>
+                    <p>R$ 60,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Ovo de colher com casca de chocolate meio amargo recheado com um delicioso brigadeiro e
+                        confeitado com granulado Melken.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo de Brigadeiro', 60)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Ovo de Ninho com Nutella -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/Ninhonutella.jpg" alt="Ovo de Ninho com Nutella">
+                    <h3>Ovo de Ninho com Nutella</h3>
+                    <p>R$ 70,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Ovo de colher com casca de chocolate meio amargo, recheado e confeitado com brigadeiro de Ninho e
+                        a maravilhosa Nutella.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo de Ninho com Nutella', 70)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+
+            <!-- Ovo Kinder Bueno -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <span class="selo-novo">NOVO</span>
+                    <img src="image/kinderbueno.jpg" alt="Ovo Kinder Bueno">
+                    <h3>Ovo Kinder Bueno</h3>
+                    <p>R$ 73,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Ovo de colher com casca de chocolate meio amargo, recheado com um delicioso brigadeiro de ninho,
+                        a maravilhosa Nutella e pedaços de Kinder Bueno White.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo de Kinder Bueno', 73)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Ovo Sensação -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/ovo-sensacao.jpg" alt="Ovo Sensação">
+                    <h3>Ovo Sensação</h3>
+                    <p>R$ 72,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate ao leite recheada com brigadeiro e geleia de morango artesanal.</p>
+                    <ul class="lista-sabores-1">
+                        <li>Brigadeiro</li>
+                        <li>Morango</li>
+                        <li>Chocolate ao leite</li>
+                        <li>Granulado belga</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo Sensação', 72)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+
+            <!-- Ovo Ninho com Nutella -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/ovo-ninho-nutella.jpg" alt="Ovo Ninho com Nutella">
+                    <h3>Ovo Ninho com Nutella</h3>
+                    <p>R$ 75,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Um dos favoritos! Camadas de brigadeiro de ninho e Nutella com casca crocante.</p>
+                    <ul class="lista-sabores-1">
+                        <li>Ninho</li>
+                        <li>Nutella</li>
+                        <li>Chocolate ao leite</li>
+                        <li>Confeitos crocantes</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Ninho e nutela', 70)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Florido Doces</p>
+
+        <!-- Link com ícone do Instagram usando Font Awesome -->
+        <a href="https://instagram.com/suapagina" target="_blank">
+            <i class="fab fa-instagram" style="margin-right: 5px;"></i>
+            Instagram
+        </a>
+    </footer>
+
+
+
+    <!-- Script para efeito de fade-in ao carregar a página -->
+    <script>
+        document.body.style.opacity = 0; // começa invisível
+        window.addEventListener("load", () => {
+            document.body.style.transition = "opacity 0.6s"; // define a transição
+            document.body.style.opacity = 1; // revela a página suavemente
+        });
+    </script>
+
+    <!-- Carrinho de compra -->
+    <!-- Botão flutuante para abrir/fechar carrinho -->
+    <button id="abrir-carrinho" onclick="toggleCarrinho()">🛒 Carrinho (<span id="total-itens">0</span>)</button>
+
+    <!-- Carrinho começa oculto -->
+    <div id="carrinho-container" class="oculto">
+        <h3>Seu Carrinho</h3>
+        <ul id="lista-carrinho"></ul>
+        <p><strong>Total: R$ <span id="total-preco">0,00</span></strong></p>
+        <button onclick="enviarPedido()">Finalizar Pedido no WhatsApp</button>
     </div>
 
-        <div class="produto">
-      <!-- Um bloco de produto -->
-      <img src="image/trufinha.jpg" alt="Brigadeiro" width="150">
-      <!-- Imagem do doce (você pode substituir pelo nome real do arquivo) -->
-      <h3>Trufinha</h3>
-      <!-- Nome do doce -->
-      <p>R$ 5,00 cada</p>
-      <!-- Preço do doce -->
-    </div>
 
-    <!-- Aqui você pode copiar e colar mais <div class="produto"> para adicionar outros doces -->
-  </section>
+    <!-- Notificação "Produto adicionado" -->
+    <div id="toast-adicionado"> Produto adicionado ao carrinho ✅</div>
 
-  <section id="contato">
-    <!-- Seção de contato -->
-    <h2>Faça seu pedido</h2>
-    <p>
-      Entre em contato pelo WhatsApp:
-      <a href="https://wa.me/5544998394213" target="_blank">Clique aqui</a>
-      <!-- Substitua "55SEUNUMERO" pelo seu número real com DDD (ex: 5544999999999) -->
-    </p>
-  </section>
 
-  <footer>
-    <!-- Rodapé do site -->
-    <p>&copy; 2025 Florido Doces. Todos os direitos reservados.</p>
-  </footer>
+
+    <!-- Botão flutuante de WhatsApp com ícone do Font Awesome -->
+    <a href="https://wa.me/554497302139" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const carrinho = [];
+
+        // Carrega o carrinho salvo do localStorage, se existir
+
+        const carrinhoSalvo = localStorage.getItem("carrinhoFlorido");
+        if (carrinhoSalvo) {
+            carrinho.push(...JSON.parse(carrinhoSalvo));
+            atualizarCarrinho();
+        }
+
+
+        function mostrarToast() {
+            const toast = document.getElementById("toast-adicionado");
+            if (!toast) {
+                console.warn("Elemento #toast-adicionado não encontrado.");
+                return;
+            }
+            toast.classList.add("toast-visivel");
+            setTimeout(() => {
+                toast.classList.remove("toast-visivel");
+            }, 2000);
+        }
+
+
+        function adicionarAoCarrinho(produto, preco = 0) {
+            const existente = carrinho.find(item => item.nome === produto);
+            if (existente) {
+                existente.qtd += 1;
+            } else {
+                carrinho.push({ nome: produto, qtd: 1, preco: parseFloat(preco) });
+            }
+            atualizarCarrinho();
+            salvarCarrinho();
+            console.log("Chamando toast");
+            mostrarToast();
+        }
+
+        function atualizarCarrinho() {
+            const lista = document.getElementById("lista-carrinho");
+            lista.innerHTML = "";
+
+            let total = 0;
+            let totalItens = 0;
+
+            carrinho.forEach((item, index) => {
+                total += item.qtd * item.preco;
+                totalItens += item.qtd;
+
+                const li = document.createElement("li");
+                li.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <button onclick="alterarQtd(${index}, -1)">−</button>
+                    <strong>${item.qtd}</strong>
+                    <button onclick="alterarQtd(${index}, 1)">+</button>
+                    <span>${item.nome}</span>
+                </div>
+                <button onclick="removerDoCarrinho(${index})" style="margin-left: 7px;">✕</button>
+                `;
+
+                lista.appendChild(li);
+            });
+
+            document.getElementById("total-preco").textContent = total.toFixed(2).replace(".", ",");
+            document.getElementById("total-itens").textContent = totalItens;
+        }
+
+        function alterarQtd(index, delta) {
+            carrinho[index].qtd += delta;
+            if (carrinho[index].qtd <= 0) {
+                carrinho.splice(index, 1); // Remove se zerar
+            }
+            atualizarCarrinho();
+            salvarCarrinho();
+        }
+
+
+        function enviarPedido() {
+            if (carrinho.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+
+            const mensagem = carrinho
+                .map(item => `• ${item.qtd}x ${item.nome}`)
+                .join("%0A");
+
+            const texto = `Olá! Quero fazer um pedido:%0A${mensagem}`;
+            const url = `https://wa.me/554497302139?text=${texto}`;
+
+            // Abre o WhatsApp
+            window.open(url, "_blank");
+
+            // Limpa o carrinho e redireciona
+            carrinho.length = 0; // esvazia o array
+            salvarCarrinho();    // atualiza o localStorage
+            atualizarCarrinho(); // atualiza a interface
+
+            // Redireciona após pequeno delay
+            setTimeout(() => {
+                window.location.href = "agradecimento.html";
+            }, 500); // meio segundo (ajustável)
+        }
+
+        function toggleCarrinho() {
+            const container = document.getElementById("carrinho-container");
+            container.classList.toggle("visivel");
+            container.classList.toggle("oculto");
+        }
+
+        // Fecha o carrinho ao clicar fora
+        document.addEventListener("click", function (event) {
+            const carrinho = document.getElementById("carrinho-container");
+            const botao = document.getElementById("abrir-carrinho");
+
+            if (
+                carrinho.classList.contains("visivel") &&
+                !carrinho.contains(event.target) &&
+                !botao.contains(event.target)
+            ) {
+                carrinho.classList.remove("visivel");
+                carrinho.classList.add("oculto");
+            }
+        });
+
+
+        function salvarCarrinho() {
+            localStorage.setItem("carrinhoFlorido", JSON.stringify(carrinho));
+        }
+
+
+        function removerDoCarrinho(index) {
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+            salvarCarrinho();
+        }
+
+    </script>
+
+
 
 </body>
+
 </html>
