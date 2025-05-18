@@ -49,7 +49,154 @@
         </nav>
     </header>
 
-    <section id="Presentes">
+    <section id="Bombons">
+        <!-- Seção que exibe os produtos Presentes -->
+        <h2>Bombons</h2>
+
+        <p class="aviso-scroll">Arraste para o lado 👉</p>
+        <div class="produtos-container">
+            <!-- Container para exibir os produtos lado a lado -->
+
+            <!-- Card: bombom Brigadeiro -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/bombons/bombons-brigadeiro.png" alt="Brigadeiro">
+                    <h3>Brigadeiro</h3>
+                    <p>R$ 5,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate meio amargo, com recheio de brigadeiro.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Bombom de Brigadeiro', 5)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+
+            <!-- Card: bombom Beijinho -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/bombons/bombons-beijinho.png" alt="Beijinho">
+                    <h3>Beijinho</h3>
+                    <p>R$ 5,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate meio amargo, com recheio de brigadeiro de maracujá.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Bombom de Beijinho', 5)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+
+            <!-- Card: bombom maracujá -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/bombons/bombons-maracuja-2.jpg" alt="maracuja">
+                    <h3>Maracujá</h3>
+                    <p>R$ 5,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate meio amargo, com recheio de brigadeiro de maracujá.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Bombom de Maracujá', 5)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Card: bombom morango -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/bombons/bombons-morango.jpg" alt="maracuja">
+                    <h3>Morango</h3>
+                    <p>R$ 5,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate meio amargo, com recheio de brigadeiro de leite ninho e um morango inteiro.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Bombom de Morango', 5)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+            <!-- Card: bombom Ninho com Nutella -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/bombons/bombons-ninho-nutella.jpg" alt="maracuja">
+                    <h3>Ninho com Nutella</h3>
+                    <p>R$ 7,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate meio amargo, com recheio de ninho com nutella.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Bombom de Ninho com Nutella', 7)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+            <!-- Card: bombom Café -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/bombons/bombons-cafe.jpg" alt="maracuja">
+                    <h3>Café</h3>
+                    <p>R$ 5,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Casca de chocolate meio amargo, com recheio de brigadeiro de café.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Bombom de Café', 5)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+
+<section id="Presentes">
         <!-- Seção que exibe os produtos Presentes -->
         <h2>Presentes</h2>
 
@@ -61,7 +208,7 @@
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <!-- Frente do card -->
                 <div class="card-front">
-                    <img src="image/cx4doces.png" alt="Caixa 4 Doces">
+                    <img src="image/Presentes/presente-caixa-quatro-doces.png" alt="Caixa 4 Doces">
                     <h3>Caixa 4 Doces</h3>
                     <p>R$ 12,00 cada</p>
                 </div>
@@ -84,11 +231,94 @@
 
             <!-- -------------------------------------------------------------- -->
 
+            <!-- Card: Caixa 6 Doces -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/Presentes/presente-caixa-seis-doces.png" alt="Caixa 6 Doces">
+                    <h3>Caixa 6 Doces</h3>
+                    <p>R$ 18,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <ul class="lista-sabores-1">
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Ninho</li>
+                        <li>Brigadeiro Branco</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Caixa 6 Doces', 18)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Card: Caixa 12 Doces -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/Presentes/presente-caixa-doze-doces.jpg" alt="Caixa 12 Doces">
+                    <h3>Caixa 12 Doces</h3>
+                    <p>R$ 30,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <ul class="lista-sabores-1">
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Ninho</li>
+                        <li>Brigadeiro Branco</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Caixa 12 Doces', 30)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Card: Cartão Presente -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/Presentes/presente-cartao-presente.jpg" alt="Cartão Presente">
+                    <h3>Cartão Presente</h3>
+                    <p>R$ 5,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <p>Um cartão de presente com as temáticas de pascoa, natal, dia das mães, amor ou personalizados.</p>
+                    <ul class="lista-sabores-1">
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Ninho</li>
+                        <li>Brigadeiro Branco</li>
+                    </ul>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Cartão Presente', 5)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+
             <!-- Card: Caixa 3 Corações -->
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <!-- Frente do card -->
                 <div class="card-front">
-                    <img src="image/cx3coracoes.png" alt="Caixa 3 Corações">
+                    <img src="image/Presentes/presente-tres-coracoes.png" alt="Caixa 3 Corações">
                     <h3>Caixa 3 Corações</h3>
                     <p>R$ 50,00 cada</p>
                 </div>
@@ -111,10 +341,161 @@
 
             <!-- -------------------------------------------------------------- -->
 
+            <!-- Adicione mais blocos .produto conforme necessário -->
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+
+    <section id="Festas">
+        <!-- Seção que exibe os produtos Presentes -->
+        <h2>Festas</h2>
+
+        <p class="aviso-scroll">Arraste para o lado 👉</p>
+        <div class="produtos-container">
+            <!-- Container para exibir os produtos lado a lado -->
+
+            <!-- Card: Cento brigadeiro -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/Festas/festas-cento-brigadeiro.jpg" alt="Cento de Brigadeiro">
+                    <h3>Cento de Brigadeiro</h3>
+                    <p>R$ 140,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <p>Um cento de brigadeiro de chocolate nobre com granulado Melken.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Cento de Brigadeiro', 140)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Card: Cento de beijinho -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <!-- Frente do card -->
+                <div class="card-front">
+                    <img src="image/Festas/festas-cento-beijinho.jpg" alt="Caixa 3 Corações">
+                    <h3>Cento de beijinho</h3>
+                    <p>R$ 140,00 cada</p>
+                </div>
+
+                <!-- Verso do card -->
+                <div class="card-back">
+                    <h3>Sabores</h3>
+                    <p>Um cento de beijinho cremoso confeito com coco ralado.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Cento de Beijinho', 140)">
+                        Carrinho
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+
+            <!-- Copo coração chocolate branco -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/Festas/festas-mini-copo-coracao-chocolate-branco.jpg" alt="Copo coração chocolate branco">
+                    <h3>Coração com Chocolate Branco</h3>
+                    <p>R$ 160,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Mini copo feito de chocolate meio amargo em formato de coração e recheado com brigadeiro de chocolate branco.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Coração com Chocolate Branco', 160)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+       <!-- -------------------------------------------------------------- -->
+
+            <!-- Copo ninho com uva -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/Festas/festas-mini-copo-ninho-uva.jpg" alt="Mini copo ninho com uva">
+                    <h3>Copo de ninho com uva</h3>
+                    <p>R$ 160,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Mini copo feito de chocolate meio amargo, recheado com brigadeiro de ninho e decorado com uma uva.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Copo de Ninho com Uva', 160)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+       <!-- -------------------------------------------------------------- -->
+
+            <!-- Mousse de limao -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/Festas/festas-mousse-limão.jpg" alt="Mousse de limao">
+                    <h3>Copo de mousse de Limão</h3>
+                    <p>R$ 160,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Copo de mousse de limão decorado com raspas de limão.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Mousse de Limão', 160)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+       <!-- -------------------------------------------------------------- -->
+
+            <!-- Mousse de Maracujá -->
+            <div class="card-flip" onclick="this.classList.toggle('flipped')">
+                <div class="card-front">
+                    <img src="image/Festas/festas-mousse-maracuja.jpg" alt="Mousse de maracujá">
+                    <h3>Copo de Mousse de Maracujá</h3>
+                    <p>R$ 160,00</p>
+                </div>
+                <div class="card-back">
+                    <h3>Composição</h3>
+                    <p>Copo de mousse de Maracuja decorado com redução de maracujá.</p>
+                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Mousse de Maracujá', 160)">
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Adicione mais blocos .produto conforme necessário -->
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+
+
+    
+
+    <!-- Seção: Ovos de Colher 450g -->
+    <section id="Pascoa">
+        <h2>Pascoa</h2>
+
+        <p class="aviso-scroll">Arraste para o lado 👉</p>
+        <div class="produtos-container">
+
+
+
             <!-- Ovo Tradicional -->
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/fechado.jpg" alt="Ovo Tradicional">
+                    <img src="image/Pascoa/pascoa-ovo-fechado.jpg" alt="Ovo Tradicional">
                     <h3>Ovo Tradicional</h3>
                     <p>R$ 40,00</p>
                 </div>
@@ -139,30 +520,17 @@
                 </div>
             </div>
 
-
-            <!-- Adicione mais blocos .produto conforme necessário -->
-        </div>
-    </section>
-
-    <!-- -------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- Seção: Ovos de Colher 450g -->
-    <section id="ovos">
-        <h2>Ovos de Colher – 450g</h2>
-
-        <p class="aviso-scroll">Arraste para o lado 👉</p>
-        <div class="produtos-container">
+            <!-- -------------------------------------------------------------- -->
 
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/ovo-oreo.jpg" alt="Ovo de Colher Oreo">
+                    <img src="image/Pascoa/pascoa-ovo-oreo.jpg" alt="Ovo de Colher Oreo">
                     <h3>Ovo Oreo</h3>
                     <p>R$ 70,00</p>
                 </div>
                 <div class="card-back">
                     <h3>Composição</h3>
-                    <p>Ovo de colher com casca de chocolate branco envolto por pequenos pedaços de bolacha Oreo,
+                    <p>Ovo de colher (±450g) com casca de chocolate branco envolto por pequenos pedaços de bolacha Oreo,
                         recheado e confeitado com um cremoso brigadeiro de ninho e pedações de Oreo.</p>
                     <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo Oreo', 70)">
                         Carrinho
@@ -173,7 +541,7 @@
 
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/caixa-trio.jpg" alt="Caixa Trio">
+                    <img src="image/Pascoa/pascoa-caixa-trio.jpg" alt="Caixa Trio">
                     <h3>Caixa Trio</h3>
                     <p>R$ 80,00</p>
                 </div>
@@ -206,13 +574,13 @@
             <!-- Ovo Brigadeiro -->
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/brigadeiro.jpg" alt="Ovo Brigadeiro">
+                    <img src="image/Pascoa/pascoa-ovo-brigadeiro.jpg" alt="Ovo Brigadeiro">
                     <h3>Ovo de Brigadeiro</h3>
                     <p>R$ 60,00</p>
                 </div>
                 <div class="card-back">
                     <h3>Composição</h3>
-                    <p>Ovo de colher com casca de chocolate meio amargo recheado com um delicioso brigadeiro e
+                    <p>Ovo de colher (±450g) com casca de chocolate meio amargo recheado com um delicioso brigadeiro e
                         confeitado com granulado Melken.</p>
                     <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo de Brigadeiro', 60)">
                         Carrinho
@@ -225,13 +593,13 @@
             <!-- Ovo de Ninho com Nutella -->
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/Ninhonutella.jpg" alt="Ovo de Ninho com Nutella">
+                    <img src="image/Pascoa/pascoa-ovo-ninho-nutella.jpg" alt="Ovo de Ninho com Nutella">
                     <h3>Ovo de Ninho com Nutella</h3>
                     <p>R$ 70,00</p>
                 </div>
                 <div class="card-back">
                     <h3>Composição</h3>
-                    <p>Ovo de colher com casca de chocolate meio amargo, recheado e confeitado com brigadeiro de Ninho e
+                    <p>Ovo de colher (±450g) com casca de chocolate meio amargo, recheado e confeitado com brigadeiro de Ninho e
                         a maravilhosa Nutella.</p>
                     <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo de Ninho com Nutella', 70)">
                         Carrinho
@@ -246,13 +614,13 @@
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
                     <span class="selo-novo">NOVO</span>
-                    <img src="image/kinderbueno.jpg" alt="Ovo Kinder Bueno">
+                    <img src="image/Pascoa/pascoa-ovo-kinder-bueno.jpg" alt="Ovo Kinder Bueno">
                     <h3>Ovo Kinder Bueno</h3>
                     <p>R$ 73,00</p>
                 </div>
                 <div class="card-back">
                     <h3>Composição</h3>
-                    <p>Ovo de colher com casca de chocolate meio amargo, recheado com um delicioso brigadeiro de ninho,
+                    <p>Ovo de colher (±450g) com casca de chocolate meio amargo, recheado com um delicioso brigadeiro de ninho,
                         a maravilhosa Nutella e pedaços de Kinder Bueno White.</p>
                     <button class="botao-pedir" onclick="adicionarAoCarrinho('Ovo de Kinder Bueno', 73)">
                         Carrinho
@@ -265,13 +633,13 @@
             <!-- Ovo Sensação -->
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/ovo-sensacao.jpg" alt="Ovo Sensação">
+                    <img src="image/pascoa/ovo-sensacao.jpg" alt="Ovo Sensação">
                     <h3>Ovo Sensação</h3>
                     <p>R$ 72,00</p>
                 </div>
                 <div class="card-back">
                     <h3>Composição</h3>
-                    <p>Casca de chocolate ao leite recheada com brigadeiro e geleia de morango artesanal.</p>
+                    <p>Ovo de colher  (±450g) com casca de chocolate ao leite recheada com brigadeiro e geleia de morango artesanal.</p>
                     <ul class="lista-sabores-1">
                         <li>Brigadeiro</li>
                         <li>Morango</li>
@@ -290,7 +658,7 @@
             <!-- Ovo Ninho com Nutella -->
             <div class="card-flip" onclick="this.classList.toggle('flipped')">
                 <div class="card-front">
-                    <img src="image/ovo-ninho-nutella.jpg" alt="Ovo Ninho com Nutella">
+                    <img src="image/pascoa/ovo-ninho-nutella.jpg" alt="Ovo Ninho com Nutella">
                     <h3>Ovo Ninho com Nutella</h3>
                     <p>R$ 75,00</p>
                 </div>
@@ -319,7 +687,7 @@
         <p>&copy; 2025 Florido Doces</p>
 
         <!-- Link com ícone do Instagram usando Font Awesome -->
-        <a href="https://instagram.com/suapagina" target="_blank">
+        <a href="https://instagram.com/florido_doces" target="_blank">
             <i class="fab fa-instagram" style="margin-right: 5px;"></i>
             Instagram
         </a>
