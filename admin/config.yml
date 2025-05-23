@@ -6,13 +6,46 @@ media_folder: "image"
 public_folder: "/image"
 
 collections:
-  - name: "produtos"
-    label: "Produtos"
-    folder: "produtos"
+  - name: "bombons"
+    label: "Bombons"
+    folder: "produtos/bombons"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nome", name: "nome", widget: "string" }
+      - { label: "Nome", name: "title", widget: "string" }
       - { label: "Preço", name: "preco", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
+      - { label: "Descrição", name: "body", widget: "text" }
+      - { label: "Imagem", name: "image", widget: "image" }
+
+  - name: "presentes"
+    label: "Presentes"
+    folder: "produtos/presentes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nome", name: "title", widget: "string" }
+      - { label: "Preço", name: "preco", widget: "string" }
+      - { label: "Descrição", name: "body", widget: "text" }
+      - { label: "Imagem", name: "image", widget: "image" }
+
+  - name: "festas"
+    label: "Festas"
+    folder: "produtos/festas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nome", name: "title", widget: "string" }
+      - { label: "Preço", name: "preco", widget: "string" }
+      - { label: "Descrição", name: "body", widget: "text" }
+      - { label: "Imagem", name: "image", widget: "image" }
+
+  - name: "pascoa"
+    label: "Páscoa"
+    folder: "produtos/pascoa"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nome", name: "title", widget: "string" }
+      - { label: "Preço", name: "preco", widget: "string" }
+      - { label: "Descrição", name: "body", widget: "text" }
+      - { label: "Imagem", name: "image", widget: "image" }
