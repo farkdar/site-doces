@@ -45,7 +45,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../image/fundo.png');
+  background-image: url('../image/elementos/fundo.webp');
   /* Caminho da imagem de fundo */
   background-repeat: no-repeat;
   background-size: cover;
