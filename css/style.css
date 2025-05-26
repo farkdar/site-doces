@@ -8,53 +8,35 @@ body {
   position: relative;
   z-index: 1;
   background-color: #ffe2d4;
-  /* ✅ Aqui você aplica a nova cor de fundo */
   color: #73301d;
-  /* ✅ Cor padrão dos textos */
-
 }
 
 h2 {
   text-align: center;
-  /* ✅ Centraliza horizontalmente o texto */
   color: #73301d;
-  /* (opcional) Aplica a mesma cor dos textos */
   margin-bottom: 20px;
   font-size: 1.8rem;
   font-family: 'Satisfy', cursive;
-  /* Para manter estilo doce/artesanal */
   border-bottom: 2px dashed #73301d;
   display: inline-block;
   padding-bottom: 5px;
-
 }
 
 section {
   text-align: center;
-  /* ✅ Isso centraliza tudo que está dentro (inclusive o h2 com inline-block) */
 }
-
 
 /* ----------------------------- */
 /* Imagem de fundo do site      */
 /* ----------------------------- */
 .background-image {
   position: fixed;
-  /* Fixa no fundo da tela */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../image/elementos/fundo.webp');
-  /* Caminho da imagem de fundo */
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Cobre a tela inteira */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('../image/elementos/fundo.webp') no-repeat center/cover;
   opacity: 0.08;
-  /* Deixa a imagem bem suave, como marca d'água */
   z-index: -1;
   pointer-events: none;
-  /* ✅ Garante que a imagem não bloqueia cliques */
 }
 
 /* ----------------------------- */
@@ -62,47 +44,32 @@ section {
 /* ----------------------------- */
 header {
   background-color: #ffe2d4;
-  /* Roxo escuro */
   color: white;
   text-align: center;
   padding: 20px;
   position: relative;
   z-index: 2;
-  /* Acima da imagem de fundo */
 }
 
-/* ------------------------------- */
-/* Layout do logo e nome do site  */
-/* ------------------------------- */
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  /* Espaço entre logo e texto */
 }
 
 .logo {
   height: 140px;
-  /* Altura da imagem do logo */
 }
 
 .logo-text {
   font-family: 'Dancing Script', cursive;
-  /* Nova fonte mais leve */
   font-size: 3.5rem;
   margin: 0;
   font-weight: bold;
-  /* Garante que fique em bold */
   color: #73301d;
-  /* ✅ Cor personalizada para o nome */
-
 }
 
-
-/* ------------------------ */
-/* Links de navegação      */
-/* ------------------------ */
 nav a {
   color: #73301d;
   margin: 0 10px;
@@ -113,202 +80,133 @@ nav a {
 /* ------------------------ */
 /* Seção de produtos       */
 /* ------------------------ */
-
-
 #produtos {
   padding: 20px;
   text-align: center;
 }
 
-/* Container dos produtos em grade */
 .produtos-container {
   display: flex;
   flex-wrap: nowrap;
-  /* ❌ Impede quebra de linha */
   overflow-x: auto;
-  /* ✅ Habilita rolagem horizontal */
   scroll-behavior: smooth;
-  /* ✅ Suaviza a rolagem */
   gap: 20px;
-  /* Espaço entre os cards */
   padding: 20px;
-  /* Espaço interno lateral */
   -webkit-overflow-scrolling: touch;
-  /* Melhora a rolagem no iOS */
   scrollbar-width: none;
-  /* Firefox */
 }
-
 .produtos-container::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari */
 }
 
-/* Container que envolve frente e verso do card */
 .card-flip {
   flex: 0 0 auto;
-  /* ✅ Não encolhe, não cresce — tamanho fixo */
   width: 200px;
   height: 280px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   margin: 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card-flip:hover {
   transform: scale(1.05) translateY(-5px);
-  /* Leve aumento + flutuação */
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
-  /* Sombra mais forte ao hover */
-
 }
-
-/* Ao clicar, gira o card (será controlado via classe adicionada no HTML) */
 .card-flip.flipped {
   transform: rotateY(180deg);
 }
 
-/* Frente e verso do card */
 .card-front,
 .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /* Esconde o verso quando não visível */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
-  /* ✅ Garante que padding não afete o tamanho total */
 }
 
-/* Frente: imagem + nome + preço */
 .card-front {
   background: #fff;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 10px;
-  transition: transform 0.3s ease;
 }
-
 .card-front img {
   width: 100%;
   height: auto;
   border-radius: 5px;
   background: #fff8f5;
 }
-
 .card-front h3 {
   margin: 10px 0 5px;
   color: #73301d;
 }
-
 .card-front p {
   margin: 0;
 }
 
-/* Verso: descrição */
 .card-back {
   background-color: #ffe2d4;
   transform: rotateY(180deg);
   padding: 15px 20px;
   text-align: center;
   color: #73301d;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  /* ✅ Alinha ao topo do card */
   align-items: center;
-  /* Centraliza os elementos na horizontal */
   box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 280px;
+  padding-right: 10px;
 }
-
 .card-back h3 {
   margin-top: 0;
   margin-bottom: 5px;
-  /* Reduz espaço abaixo do título */
-
 }
-
 .card-back p {
-  margin-top: 4px;
-  margin-bottom: 10px;
-  /* Menor espaço entre textos */
+  margin: 4px 0 10px;
   text-align: left;
-  /* Opcional: para alinhar o parágrafo à esquerda */
   width: 100%;
-  /* Garante que o alinhamento funcione corretamente */
   max-width: 250px;
-
-}
-
-
-/* Estilo para lista de sabores em duas colunas */
-.lista-sabores-1 {
-  list-style-type: "🍬 ";
-  /* Ícone decorativo na frente dos itens */
-  margin: 0 auto;
-  column-gap: 30px;
-  /* Espaço entre as colunas */
-  font-size: 0.95rem;
-  text-align: left;
-  /* Alinha os itens à esquerda */
-  max-width: 250px;
-  padding-left: 10px;
-  /* ✅ Afasta o início do texto da borda esquerda */
-}
-
-.lista-sabores-2 {
-  list-style-type: "🍬 ";
-  /* Ícone decorativo na frente dos itens */
-  margin: 0 auto;
-  columns: 2;
-  /* ✅ Divide a lista automaticamente em 2 colunas */
-  column-gap: 30px;
-  /* Espaço entre as colunas */
-  font-size: 0.95rem;
-  text-align: left;
-  /* Alinha os itens à esquerda */
-  max-width: 250px;
-  padding-left: 15px;
-  /* ✅ Afasta o início do texto da borda esquerda */
-}
-
-/* Estilo para o último sabor isolado */
-.sabor-final {
-  list-style-type: "🍬 ";
-  /* Ícone decorativo na frente dos itens */
-  margin: 0 auto;
-  max-width: 250px;
-  /* Garante alinhamento com a lista */
-  font-size: 0.95rem;
-  text-align: left;
-  /* Alinha o texto à esquerda */
-  padding-left: 0px;
-  /* ✅ Afasta o início do texto da borda esquerda */
 }
 
 .lista-sabores-1,
 .lista-sabores-2,
+.sabor-final {
+  list-style-type: "🍬 ";
+  margin: 0 auto;
+  font-size: 0.95rem;
+  text-align: left;
+  max-width: 250px;
+}
+.lista-sabores-1 {
+  column-gap: 30px;
+  padding-left: 10px;
+}
+.lista-sabores-2 {
+  columns: 2;
+  column-gap: 30px;
+  padding-left: 15px;
+}
+.sabor-final {
+  padding-left: 0;
+}
+.lista-sabores-1 li,
+.lista-sabores-2 li,
 .sabor-final li {
   margin-bottom: 6px;
   break-inside: avoid;
-  /* Evita quebras no meio de uma linha */
 }
+
 
 
 /* ------------------------ */
