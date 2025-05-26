@@ -11,12 +11,6 @@
       "preco": "5,00",
       "descricao": "Casca de chocolate com recheio de brigadeiro.",
       "image": "/image/bombons/bombons-brigadeiro.webp"
-    },
-    {
-      "title": "Coffee",
-      "preco": "55",
-      "descricao": "Brigadeiro de cafe",
-      "image": "/image/bombons/bombons-cafe.webp"
     }
   ]
 }
