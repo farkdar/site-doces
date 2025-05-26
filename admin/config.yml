@@ -16,15 +16,16 @@ collections:
           - label: "Bombons"
             name: "items"
             widget: "list"
-            media_folder: "image/bombons"
-            public_folder: "/image/bombons"
             label_singular: "Bombom"
             fields:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Imagem", name: "image", widget: "image" }
-
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "image/bombons"
+                public_folder: "/image/bombons"
 
   - name: "presentes"
     label: "Presentes"
@@ -32,13 +33,20 @@ collections:
       - file: "produtos/presentes.json"
         label: "Lista de Presentes"
         name: "presentes"
-        widget: "list"
-        label_singular: "Presente"
         fields:
-          - { label: "Nome", name: "title", widget: "string" }
-          - { label: "Preço", name: "preco", widget: "string" }
-          - { label: "Descrição", name: "descricao", widget: "text" }
-          - { label: "Imagem", name: "image", widget: "image" }
+          - label: "Presentes"
+            name: "items"
+            widget: "list"
+            label_singular: "Presente"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "image/presentes"
+                public_folder: "/image/presentes"
 
   - name: "festas"
     label: "Festas"
@@ -46,13 +54,20 @@ collections:
       - file: "produtos/festas.json"
         label: "Lista de Festas"
         name: "festas"
-        widget: "list"
-        label_singular: "Item de Festa"
         fields:
-          - { label: "Nome", name: "title", widget: "string" }
-          - { label: "Preço", name: "preco", widget: "string" }
-          - { label: "Descrição", name: "descricao", widget: "text" }
-          - { label: "Imagem", name: "image", widget: "image" }
+          - label: "Festas"
+            name: "items"
+            widget: "list"
+            label_singular: "Item de Festa"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "image/festas"
+                public_folder: "/image/festas"
 
   - name: "pascoa"
     label: "Páscoa"
@@ -60,10 +75,17 @@ collections:
       - file: "produtos/pascoa.json"
         label: "Lista de Páscoa"
         name: "pascoa"
-        widget: "list"
-        label_singular: "Ovo de Páscoa"
         fields:
-          - { label: "Nome", name: "title", widget: "string" }
-          - { label: "Preço", name: "preco", widget: "string" }
-          - { label: "Descrição", name: "descricao", widget: "text" }
-          - { label: "Imagem", name: "image", widget: "image" }
+          - label: "Páscoa"
+            name: "items"
+            widget: "list"
+            label_singular: "Produto de Páscoa"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "image/pascoa"
+                public_folder: "/image/pascoa"
