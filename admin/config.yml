@@ -24,8 +24,6 @@ collections:
               - label: "Imagem"
                 name: "image"
                 widget: "image"
-                media_folder: "image/bombons"
-                public_folder: "/image/bombons"
 
   - name: "presentes"
     label: "Presentes"
@@ -45,8 +43,6 @@ collections:
               - label: "Imagem"
                 name: "image"
                 widget: "image"
-                media_folder: "image/presentes"
-                public_folder: "/image/presentes"
 
   - name: "festas"
     label: "Festas"
@@ -66,8 +62,6 @@ collections:
               - label: "Imagem"
                 name: "image"
                 widget: "image"
-                media_folder: "image/festas"
-                public_folder: "/image/festas"
 
   - name: "pascoa"
     label: "Páscoa"
@@ -87,5 +81,3 @@ collections:
               - label: "Imagem"
                 name: "image"
                 widget: "image"
-                media_folder: "image/pascoa"
-                public_folder: "/image/pascoa"
