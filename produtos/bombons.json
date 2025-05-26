@@ -11,6 +11,12 @@
       "preco": "5,00",
       "descricao": "Casca de chocolate com recheio de brigadeiro.",
       "image": "/image/bombons/bombons-brigadeiro.webp"
+    },
+    {
+      "title": "Teste",
+      "preco": "400",
+      "descricao": "Teste",
+      "image": "/image/bombons/5357216-800-auto.webp"
     }
   ]
 }
