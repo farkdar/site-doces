@@ -1,7 +1,8 @@
 async function carregarProdutos(categoria, containerId, arquivoJson) {
   try {
     const response = await fetch(arquivoJson);
-    const produtos = await response.json();
+    const data = await response.json();
+    const produtos = data.items; // agora acessa a chave "items"
 
     const container = document.getElementById(containerId);
     produtos.forEach(produto => {
@@ -28,5 +29,3 @@ async function carregarProdutos(categoria, containerId, arquivoJson) {
     console.error(`Erro ao carregar ${categoria}:`, erro);
   }
 }
-
-carregarProdutos("Bombons", "produtos-bombons", "produtos/bombons.json");
