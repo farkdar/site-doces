@@ -24,8 +24,8 @@ collections:
               - label: "Imagem"
                 name: "image"
                 widget: "image"
-                media_folder: "image/bombons"
-                public_folder: "/image/bombons"
+                media_folder: "../image/bombons"
+                public_folder: "/../image/bombons"
 
   - name: "presentes"
     label: "Presentes"
