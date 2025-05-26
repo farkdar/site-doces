@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "title": "Caixa 4 Doces",
+      "preco": "12,00",
+      "descricao": "Você pode escolher 4 sabores entre: Brigadeiro, Beijinho, Ninho e Brigadeiro Branco.",
+      "image": "/image/Presentes/presente-caixa-quatro-doces.webp"
+    },
+    {
+      "title": "Caixa 6 Doces",
+      "preco": "18,00",
+      "descricao": "Você pode escolher 6 sabores entre: Brigadeiro, Beijinho, Ninho e Brigadeiro Branco.",
+      "image": "/image/Presentes/presente-caixa-seis-doces.webp"
+    },
+    {
+      "title": "Caixa 12 Doces",
+      "preco": "30,00",
+      "descricao": "Você pode escolher 12 sabores entre: Brigadeiro, Beijinho, Ninho e Brigadeiro Branco.",
+      "image": "/image/Presentes/presente-caixa-doze-doces.webp"
+    },
+    {
+      "title": "Cartão Presente",
+      "preco": "5,00",
+      "descricao": "Um presente com tema especial (Páscoa, Natal, Dia das Mães, Amor ou personalizado) acompanhado de um doce à sua escolha entre: Brigadeiro, Beijinho, Ninho e Brigadeiro Branco.",
+      "image": "/image/Presentes/presente-cartao-presente.webp"
+    },
+    {
+      "title": "Caixa 3 Corações",
+      "preco": "50,00",
+      "descricao": "Escolha 3 sabores entre: Brigadeiro, Beijinho, Ninho e Brigadeiro Branco para compor esta linda caixa em formato de coração.",
+      "image": "/image/Presentes/presente-tres-coracoes.webp"
+    }
+  ]
+}
