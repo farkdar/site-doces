@@ -12,13 +12,17 @@ collections:
       - file: "produtos/bombons.json"
         label: "Lista de Bombons"
         name: "bombons"
-        widget: "list"
-        label_singular: "Bombom"
         fields:
-          - { label: "Nome", name: "title", widget: "string" }
-          - { label: "Preço", name: "preco", widget: "string" }
-          - { label: "Descrição", name: "descricao", widget: "text" }
-          - { label: "Imagem", name: "image", widget: "image" }
+          - label: "Bombons"
+            name: "items"
+            widget: "list"
+            label_singular: "Bombom"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Imagem", name: "image", widget: "image" }
+
 
   - name: "presentes"
     label: "Presentes"
