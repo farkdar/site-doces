@@ -3,8 +3,8 @@ backend:
   branch: main
 
 
-media_folder: "image/bombons"
-public_folder: "/image/bombons"
+media_folder: "image"
+public_folder: "/image"
 
 collections:
   - name: "bombons"
