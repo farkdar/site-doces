@@ -1,16 +1,40 @@
 {
   "items": [
     {
+      "title": "Brigadeiro",
+      "preco": "5,00",
+      "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro.",
+      "image": "/image/bombons/bombons-brigadeiro.webp"
+    },
+    {
       "title": "Beijinho",
       "preco": "5,00",
-      "descricao": "Chocolate com recheio de beijinho de coco.",
+      "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro de maracujá.",
       "image": "/image/bombons/bombons-beijinho.webp"
     },
     {
-      "title": "Brigadeiro",
+      "title": "Maracujá",
       "preco": "5,00",
-      "descricao": "Casca de chocolate com recheio de brigadeiro.",
-      "image": "/image/bombons/bombons-brigadeiro.webp"
+      "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro de maracujá.",
+      "image": "/image/bombons/bombons-maracuja-2.webp"
+    },
+    {
+      "title": "Morango",
+      "preco": "5,00",
+      "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro de leite ninho e um morango inteiro.",
+      "image": "/image/bombons/bombons-morango.webp"
+    },
+    {
+      "title": "Ninho com Nutella",
+      "preco": "7,00",
+      "descricao": "Casca de chocolate meio amargo, com recheio de ninho com nutella.",
+      "image": "/image/bombons/bombons-ninho-nutella.webp"
+    },
+    {
+      "title": "Café",
+      "preco": "5,00",
+      "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro de café.",
+      "image": "/image/bombons/bombons-cafe.webp"
     }
   ]
 }
