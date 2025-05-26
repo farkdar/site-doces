@@ -726,7 +726,19 @@
     <a href="https://wa.me/554497302139" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
+<!--Script de redirecionamento para login admin-->
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+    
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
