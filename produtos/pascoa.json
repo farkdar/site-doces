@@ -5,10 +5,17 @@
       "preco": "40,00",
       "descricao": "Ovo de páscoa tradicional com uma surpresa dentro.",
       "image": "/image/Pascoa/pascoa-ovo-fechado.webp",
-      "sabores": ["Meio amargo", "Branco", "Duo"],
+      "sabores": [
+        "Meio amargo",
+        "Branco",
+        "Duo"
+      ],
       "extra": {
         "label": "Surpresa",
-        "valores": ["Tortuguita", "Baton"]
+        "valores": [
+          "Tortuguita",
+          "Baton"
+        ]
       }
     },
     {
@@ -22,10 +29,20 @@
       "preco": "80,00",
       "descricao": "3 ovos de colher de aproximadamente 200g cada.",
       "image": "/image/Pascoa/pascoa-caixa-trio.webp",
-      "sabores": ["Brigadeiro", "Beijinho", "Ninho", "Kit Kat", "Oreo", "Uva Verde", "Maracujá"],
+      "sabores": [
+        "Brigadeiro",
+        "Beijinho",
+        "Ninho",
+        "Kit Kat",
+        "Oreo",
+        "Uva Verde",
+        "Maracujá"
+      ],
       "extra": {
         "label": "Sabor final",
-        "valores": ["Ninho com Nutella"]
+        "valores": [
+          "Ninho com Nutella"
+        ]
       }
     },
     {
@@ -41,6 +58,18 @@
       "image": "/image/Pascoa/pascoa-ovo-ninho-nutella.webp"
     },
     {
+      "title": "Ovo Ninho com Nutella",
+      "preco": "75,00",
+      "descricao": "Um dos favoritos! Camadas de brigadeiro de ninho e Nutella com casca crocante.",
+      "image": "/image/pascoa/ovo-ninho-nutella.webp",
+      "sabores": [
+        "Ninho",
+        "Nutella",
+        "Chocolate ao leite",
+        "Confeitos crocantes"
+      ]
+    },
+    {
       "title": "Ovo Kinder Bueno",
       "preco": "73,00",
       "descricao": "Ovo de colher (±450g) com casca de chocolate meio amargo, recheado com brigadeiro de ninho, Nutella e pedaços de Kinder Bueno White.",
@@ -51,14 +80,12 @@
       "preco": "72,00",
       "descricao": "Ovo de colher (±450g) com casca de chocolate ao leite recheada com brigadeiro e geleia de morango artesanal.",
       "image": "/image/pascoa/ovo-sensacao.webp",
-      "sabores": ["Brigadeiro", "Morango", "Chocolate ao leite", "Granulado belga"]
-    },
-    {
-      "title": "Ovo Ninho com Nutella",
-      "preco": "75,00",
-      "descricao": "Um dos favoritos! Camadas de brigadeiro de ninho e Nutella com casca crocante.",
-      "image": "/image/pascoa/ovo-ninho-nutella.webp",
-      "sabores": ["Ninho", "Nutella", "Chocolate ao leite", "Confeitos crocantes"]
+      "sabores": [
+        "Brigadeiro",
+        "Morango",
+        "Chocolate ao leite",
+        "Granulado belga"
+      ]
     }
   ]
 }
