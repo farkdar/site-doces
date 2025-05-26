@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: farkdar/site-doces
   branch: main
+
 
 media_folder: "image"
 public_folder: "/image"
