@@ -3,8 +3,8 @@ backend:
   branch: main
 
 
-media_folder: "image"
-public_folder: "/image"
+media_folder: "image/*"
+public_folder: "/image/*"
 
 collections:
   - name: "bombons"
@@ -13,9 +13,6 @@ collections:
       - file: "produtos/bombons.json"
         label: "Lista de Bombons"
         name: "bombons"
-        media_folder: "image/bombons"
-        public_folder: "/image/bombons"
-
         fields:
           - label: "Bombons"
             name: "items"
