@@ -8,44 +8,56 @@ public_folder: "/image"
 collections:
   - name: "bombons"
     label: "Bombons"
-    folder: "produtos/bombons"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nome", name: "title", widget: "string" }
-      - { label: "Preço", name: "preco", widget: "string" }
-      - { label: "Descrição", name: "body", widget: "text" }
-      - { label: "Imagem", name: "image", widget: "image" }
+    files:
+      - file: "produtos/bombons.json"
+        label: "Lista de Bombons"
+        name: "bombons"
+        widget: "list"
+        label_singular: "Bombom"
+        fields:
+          - { label: "Nome", name: "title", widget: "string" }
+          - { label: "Preço", name: "preco", widget: "string" }
+          - { label: "Descrição", name: "descricao", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
 
   - name: "presentes"
     label: "Presentes"
-    folder: "produtos/presentes"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nome", name: "title", widget: "string" }
-      - { label: "Preço", name: "preco", widget: "string" }
-      - { label: "Descrição", name: "body", widget: "text" }
-      - { label: "Imagem", name: "image", widget: "image" }
+    files:
+      - file: "produtos/presentes.json"
+        label: "Lista de Presentes"
+        name: "presentes"
+        widget: "list"
+        label_singular: "Presente"
+        fields:
+          - { label: "Nome", name: "title", widget: "string" }
+          - { label: "Preço", name: "preco", widget: "string" }
+          - { label: "Descrição", name: "descricao", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
 
   - name: "festas"
     label: "Festas"
-    folder: "produtos/festas"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nome", name: "title", widget: "string" }
-      - { label: "Preço", name: "preco", widget: "string" }
-      - { label: "Descrição", name: "body", widget: "text" }
-      - { label: "Imagem", name: "image", widget: "image" }
+    files:
+      - file: "produtos/festas.json"
+        label: "Lista de Festas"
+        name: "festas"
+        widget: "list"
+        label_singular: "Item de Festa"
+        fields:
+          - { label: "Nome", name: "title", widget: "string" }
+          - { label: "Preço", name: "preco", widget: "string" }
+          - { label: "Descrição", name: "descricao", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
 
   - name: "pascoa"
     label: "Páscoa"
-    folder: "produtos/pascoa"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Nome", name: "title", widget: "string" }
-      - { label: "Preço", name: "preco", widget: "string" }
-      - { label: "Descrição", name: "body", widget: "text" }
-      - { label: "Imagem", name: "image", widget: "image" }
+    files:
+      - file: "produtos/pascoa.json"
+        label: "Lista de Páscoa"
+        name: "pascoa"
+        widget: "list"
+        label_singular: "Ovo de Páscoa"
+        fields:
+          - { label: "Nome", name: "title", widget: "string" }
+          - { label: "Preço", name: "preco", widget: "string" }
+          - { label: "Descrição", name: "descricao", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
