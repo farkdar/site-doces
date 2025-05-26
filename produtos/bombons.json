@@ -1,1 +1,15 @@
+[
+  {
+    "title": "Brigadeiro",
+    "preco": "5,00",
+    "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro.",
+    "image": "/image/bombons/bombons-brigadeiro.webp"
+  },
+  {
+    "title": "Beijinho",
+    "preco": "5,00",
+    "descricao": "Casca de chocolate meio amargo, com recheio de brigadeiro de coco.",
+    "image": "/image/bombons/bombons-beijinho.webp"
+  }
+]
 
