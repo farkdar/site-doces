@@ -65,135 +65,17 @@
 
 
     <!-- -------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------- -->
 
     <section id="Festas">
-        <!-- Seção que exibe os produtos Presentes -->
-        <h2>Festas</h2>
-
-        <p class="aviso-scroll">Arraste para o lado 👉</p>
-        <div class="produtos-container">
-            <!-- Container para exibir os produtos lado a lado -->
-
-            <!-- Card: Cento brigadeiro -->
-            <div class="card-flip" onclick="this.classList.toggle('flipped')">
-                <!-- Frente do card -->
-                <div class="card-front">
-                    <img src="image/Festas/festas-cento-brigadeiro.webp" alt="Cento de Brigadeiro">
-                    <h3>Cento de Brigadeiro</h3>
-                    <p>R$ 140,00 cada</p>
-                </div>
-
-                <!-- Verso do card -->
-                <div class="card-back">
-                    <h3>Sabores</h3>
-                    <p>Um cento de brigadeiro de chocolate nobre com granulado Melken.</p>
-                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Cento de Brigadeiro', 140)">
-                        Carrinho
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- -------------------------------------------------------------- -->
-
-            <!-- Card: Cento de beijinho -->
-            <div class="card-flip" onclick="this.classList.toggle('flipped')">
-                <!-- Frente do card -->
-                <div class="card-front">
-                    <img src="image/Festas/festas-cento-beijinho.webp" alt="Caixa 3 Corações">
-                    <h3>Cento de beijinho</h3>
-                    <p>R$ 140,00 cada</p>
-                </div>
-
-                <!-- Verso do card -->
-                <div class="card-back">
-                    <h3>Sabores</h3>
-                    <p>Um cento de beijinho cremoso confeito com coco ralado.</p>
-                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Cento de Beijinho', 140)">
-                        Carrinho
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- -------------------------------------------------------------- -->
-
-            <!-- Copo coração chocolate branco -->
-            <div class="card-flip" onclick="this.classList.toggle('flipped')">
-                <div class="card-front">
-                    <img src="image/Festas/festas-mini-copo-coracao-chocolate-branco.webp" alt="Copo coração chocolate branco">
-                    <h3>Coração com Chocolate Branco</h3>
-                    <p>R$ 160,00</p>
-                </div>
-                <div class="card-back">
-                    <h3>Composição</h3>
-                    <p>Mini copo feito de chocolate meio amargo em formato de coração e recheado com brigadeiro de chocolate branco.</p>
-                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Coração com Chocolate Branco', 160)">
-                        Carrinho
-                    </button>
-                </div>
-            </div>
-
-       <!-- -------------------------------------------------------------- -->
-
-            <!-- Copo ninho com uva -->
-            <div class="card-flip" onclick="this.classList.toggle('flipped')">
-                <div class="card-front">
-                    <img src="image/Festas/festas-mini-copo-ninho-uva.webp" alt="Mini copo ninho com uva">
-                    <h3>Copo de ninho com uva</h3>
-                    <p>R$ 160,00</p>
-                </div>
-                <div class="card-back">
-                    <h3>Composição</h3>
-                    <p>Mini copo feito de chocolate meio amargo, recheado com brigadeiro de ninho e decorado com uma uva.</p>
-                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Copo de Ninho com Uva', 160)">
-                        Carrinho
-                    </button>
-                </div>
-            </div>
-
-       <!-- -------------------------------------------------------------- -->
-
-            <!-- Mousse de limao -->
-            <div class="card-flip" onclick="this.classList.toggle('flipped')">
-                <div class="card-front">
-                    <img src="image/Festas/festas-mousse-limão.webp" alt="Mousse de limao">
-                    <h3>Copo de mousse de Limão</h3>
-                    <p>R$ 160,00</p>
-                </div>
-                <div class="card-back">
-                    <h3>Composição</h3>
-                    <p>Copo de mousse de limão decorado com raspas de limão.</p>
-                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Mousse de Limão', 160)">
-                        Carrinho
-                    </button>
-                </div>
-            </div>
-
-       <!-- -------------------------------------------------------------- -->
-
-            <!-- Mousse de Maracujá -->
-            <div class="card-flip" onclick="this.classList.toggle('flipped')">
-                <div class="card-front">
-                    <img src="image/Festas/festas-mousse-maracuja.webp" alt="Mousse de maracujá">
-                    <h3>Copo de Mousse de Maracujá</h3>
-                    <p>R$ 160,00</p>
-                </div>
-                <div class="card-back">
-                    <h3>Composição</h3>
-                    <p>Copo de mousse de Maracuja decorado com redução de maracujá.</p>
-                    <button class="botao-pedir" onclick="adicionarAoCarrinho('Mousse de Maracujá', 160)">
-                        Carrinho
-                    </button>
-                </div>
-            </div>
-
-
-            <!-- Adicione mais blocos .produto conforme necessário -->
-        </div>
+      <h2>Festas</h2>
+      <p class="aviso-scroll">Arraste para o lado 👉</p>
+      <div id="produtos-festas" class="produtos-container"></div>
     </section>
+
+
+    <!-- -------------------------------------------------------------- -->
+
+
 
     <!-- -------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------- -->
@@ -465,6 +347,7 @@
     <script>
   carregarProdutos("Bombons", "produtos-bombons", "produtos/bombons.json");
   carregarProdutos("Presentes", "produtos-presentes", "produtos/presentes.json");
+  carregarProdutos("Festas", "produtos-festas", "produtos/festas.json");
 </script>
 
 
