@@ -13,6 +13,9 @@ collections:
       - file: "produtos/bombons.json"
         label: "Lista de Bombons"
         name: "bombons"
+        media_folder: "image/bombons"
+        public_folder: "/image/bombons"
+
         fields:
           - label: "Bombons"
             name: "items"
