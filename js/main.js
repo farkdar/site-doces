@@ -101,47 +101,46 @@ function alterarQtd(index, delta) {
 
 
 function enviarPedido() {
-    if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio!");
-        return;
-    }
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio!");
+    return;
+  }
 
-    const agrupado = {};
-    let total = 0;
+  const agrupado = {};
+  let total = 0;
 
-    carrinho.forEach(item => {
-        total += item.qtd * item.preco;
-        const cat = item.categoria || "Outros";
-        if (!agrupado[cat]) agrupado[cat] = [];
-        agrupado[cat].push(item);
+  carrinho.forEach(item => {
+    total += item.qtd * item.preco;
+    const cat = item.categoria || "Outros";
+    if (!agrupado[cat]) agrupado[cat] = [];
+    agrupado[cat].push(item);
+  });
+
+  let mensagem = "Olá! Quero fazer um pedido:\n\n";
+
+  for (const categoria in agrupado) {
+    // pular categorias com "doce" no nome
+    if (categoria.toLowerCase().includes("doce")) continue;
+
+    mensagem += `*${categoria}*\n`;
+    agrupado[categoria].forEach(item => {
+      mensagem += `• ${item.qtd}x ${item.nome}\n`;
     });
+    mensagem += `\n`;
+  }
 
-    let mensagem = "Olá! Quero fazer um pedido:\n\n";
+  mensagem += `*Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
 
-    function emojiPorCategoria(categoria) {
-        const nome = categoria.toLowerCase();
+  const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
 
-        if (nome.includes("festa")) return "🎉";
-        if (nome.includes("pascoa")) return "🐰";
-        if (nome.includes("presente")) return "🎁";
-        if (nome.includes("bombom") || nome.includes("bombons")) return "🍬";
-        if (nome.includes("doce")) return ""; // não mostrar emoji p/ doces
-        return "📦"; // fallback
-    }
+  carrinho.length = 0;
+  salvarCarrinho();
+  atualizarCarrinho();
 
-
-    mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
-
-    const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, "_blank");
-
-    carrinho.length = 0;
-    salvarCarrinho();
-    atualizarCarrinho();
-
-    setTimeout(() => {
-        window.location.href = "agradecimento.html";
-    }, 500);
+  setTimeout(() => {
+    window.location.href = "agradecimento.html";
+  }, 500);
 }
 
 
