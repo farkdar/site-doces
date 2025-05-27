@@ -101,54 +101,52 @@ function alterarQtd(index, delta) {
 
 
 function enviarPedido() {
-  if (carrinho.length === 0) {
-    alert("Seu carrinho está vazio!");
-    return;
-  }
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
 
-  const agrupado = {};
+    const agrupado = {};
+    let total = 0;
 
-  let total = 0;
-
-  carrinho.forEach(item => {
-    total += item.qtd * item.preco;
-    const cat = item.categoria || "Outros";
-    if (!agrupado[cat]) agrupado[cat] = [];
-    agrupado[cat].push(item);
-  });
-
-  let mensagem = "Olá! Quero fazer um pedido:%0A%0A";
-
-  for (const categoria in agrupado) {
-    const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
-                  categoria.toLowerCase().includes("pascoa") ? "🐰" :
-                  categoria.toLowerCase().includes("presente") ? "🎁" :
-                  categoria.toLowerCase().includes("bombom") ? "🍫" :
-                  "📦";
-
-    mensagem += `${emoji} *${categoria}*%0A`;
-
-    agrupado[categoria].forEach(item => {
-      mensagem += `• ${item.qtd}x ${item.nome}%0A`;
+    carrinho.forEach(item => {
+        total += item.qtd * item.preco;
+        const cat = item.categoria || "Outros";
+        if (!agrupado[cat]) agrupado[cat] = [];
+        agrupado[cat].push(item);
     });
 
-    mensagem += `%0A`;
-  }
+    let mensagem = "Olá! Quero fazer um pedido:\n\n";
 
-  mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
+    for (const categoria in agrupado) {
+        const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
+            categoria.toLowerCase().includes("pascoa") ? "🐰" :
+                categoria.toLowerCase().includes("presente") ? "🎁" :
+                    categoria.toLowerCase().includes("bombom") ? "🍫" :
+                        categoria.toLowerCase().includes("doces") ? "🍬" :
+                            "📦";
 
-  const url = `https://wa.me/554497302139?text=${mensagem}`;
-  window.open(url, "_blank");
+        mensagem += `${emoji} *${categoria}*\n`;
+        agrupado[categoria].forEach(item => {
+            mensagem += `• ${item.qtd}x ${item.nome}\n`;
+        });
+        mensagem += `\n`;
+    }
 
-  // Limpa o carrinho
-  carrinho.length = 0;
-  salvarCarrinho();
-  atualizarCarrinho();
+    mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
 
-  setTimeout(() => {
-    window.location.href = "agradecimento.html";
-  }, 500);
+    const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+
+    carrinho.length = 0;
+    salvarCarrinho();
+    atualizarCarrinho();
+
+    setTimeout(() => {
+        window.location.href = "agradecimento.html";
+    }, 500);
 }
+
 
 
 function toggleCarrinho() {
