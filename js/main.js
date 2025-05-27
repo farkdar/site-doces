@@ -118,32 +118,33 @@ function enviarPedido() {
 
     let mensagem = "Olá! Quero fazer um pedido:\n\n";
 
-    const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
-        categoria.toLowerCase().includes("pascoa") ? "🐰" :
-            categoria.toLowerCase().includes("presente") ? "🎁" :
-                categoria.toLowerCase().includes("bombom") ? "🍬" :
-                    "📦";
+    for (const categoria in agrupado) {
+        const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
+            categoria.toLowerCase().includes("pascoa") ? "🐰" :
+                categoria.toLowerCase().includes("presente") ? "🎁" :
+                    categoria.toLowerCase().includes("bombom") ? "🍬" :
+                        "📦"; // <- vai cair aqui
 
 
-    mensagem += `${emoji} *${categoria}*\n`;
-    agrupado[categoria].forEach(item => {
-        mensagem += `• ${item.qtd}x ${item.nome}\n`;
-    });
-    mensagem += `\n`;
-}
+        mensagem += `${emoji} *${categoria}*\n`;
+        agrupado[categoria].forEach(item => {
+            mensagem += `• ${item.qtd}x ${item.nome}\n`;
+        });
+        mensagem += `\n`;
+    }
 
-mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
+    mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
 
-const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
-window.open(url, "_blank");
+    const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
 
-carrinho.length = 0;
-salvarCarrinho();
-atualizarCarrinho();
+    carrinho.length = 0;
+    salvarCarrinho();
+    atualizarCarrinho();
 
-setTimeout(() => {
-    window.location.href = "agradecimento.html";
-}, 500);
+    setTimeout(() => {
+        window.location.href = "agradecimento.html";
+    }, 500);
 }
 
 
