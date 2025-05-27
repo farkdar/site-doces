@@ -87,6 +87,12 @@ nav a {
   text-align: center;
 }
 
+.explicacao-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
 .produtos-container {
   display: flex;
   flex-wrap: nowrap;
