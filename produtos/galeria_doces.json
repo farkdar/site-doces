@@ -11,6 +11,18 @@
     {
       "title": "Cento de Beijinho",
       "image": "/image/galeria_doces/cento-de-beijinho.jpg"
+    },
+    {
+      "title": "Cartão Presente",
+      "image": "/image/galeria_doces/cartão-presente.jpg"
+    },
+    {
+      "image": "/image/galeria_doces/ninho-com-uva.jpg",
+      "title": "Ninho com Uva"
+    },
+    {
+      "title": "Mousse de Limão",
+      "image": "/image/galeria_doces/mousse-de-limao.jpg"
     }
   ]
 }
