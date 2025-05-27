@@ -58,6 +58,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  margin-bottom: 20px; /* Espaço entre logo e o menu */
 }
 
 .logo {
