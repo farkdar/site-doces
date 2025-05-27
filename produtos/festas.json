@@ -1,37 +1,37 @@
 {
   "items": [
     {
-      "title": "Cento de Brigadeiro",
+      "title": "Brigadeiro",
       "preco": "140,00",
       "descricao": "Um cento de brigadeiro de chocolate nobre com granulado Melken.",
       "image": "/image/Festas/festas-cento-brigadeiro.webp"
     },
     {
-      "title": "Cento de Beijinho",
+      "title": "Beijinho",
       "preco": "140,00",
       "descricao": "Um cento de beijinho cremoso confeito com coco ralado.",
       "image": "/image/Festas/festas-cento-beijinho.webp"
     },
     {
-      "title": "Coração com Chocolate Branco",
+      "title": "Chocolate Branco",
       "preco": "160,00",
       "descricao": "Mini copo feito de chocolate meio amargo em formato de coração e recheado com brigadeiro de chocolate branco.",
       "image": "/image/Festas/festas-mini-copo-coracao-chocolate-branco.webp"
     },
     {
-      "title": "Copo de Ninho com Uva",
+      "title": "Ninho com Uva",
       "preco": "160,00",
       "descricao": "Mini copo feito de chocolate meio amargo, recheado com brigadeiro de ninho e decorado com uma uva.",
       "image": "/image/Festas/festas-mini-copo-ninho-uva.webp"
     },
     {
-      "title": "Copo de Mousse de Limão",
+      "title": "Mousse de Limão",
       "preco": "160,00",
       "descricao": "Copo de mousse de limão decorado com raspas de limão.",
       "image": "/image/Festas/festas-mousse-limão.webp"
     },
     {
-      "title": "Copo de Mousse de Maracujá",
+      "title": "Mousse de Maracujá",
       "preco": "160,00",
       "descricao": "Copo de mousse de maracujá decorado com redução de maracujá.",
       "image": "/image/Festas/festas-mousse-maracuja.webp"
