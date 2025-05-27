@@ -6,6 +6,21 @@ media_folder: "image"
 public_folder: "/image"
 
 collections:
+  - name: "categorias"
+    label: "Ordem das Categorias"
+    files:
+      - file: "produtos/categorias.json"
+        label: "Categorias"
+        name: "categorias"
+        fields:
+          - label: "Categorias"
+            name: "categorias"
+            widget: "list"
+            fields:
+              - { label: "Nome da Categoria", name: "nome", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string", hint: "Deve ser igual ao nome do arquivo JSON da categoria, sem '.json'" }
+              - { label: "Ordem", name: "ordem", widget: "number" }
+
   - name: "bombons"
     label: "Bombons"
     files:
@@ -21,18 +36,8 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - {
-                  label: "Produto Novo?",
-                  name: "novo",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "Sabores",
-                  name: "sabores",
-                  widget: "list",
-                  required: false,
-                }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -54,18 +59,8 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - {
-                  label: "Produto Novo?",
-                  name: "novo",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "Sabores",
-                  name: "sabores",
-                  widget: "list",
-                  required: false,
-                }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -87,18 +82,8 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - {
-                  label: "Produto Novo?",
-                  name: "novo",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "Sabores",
-                  name: "sabores",
-                  widget: "list",
-                  required: false,
-                }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -120,18 +105,8 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - {
-                  label: "Produto Novo?",
-                  name: "novo",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "Sabores",
-                  name: "sabores",
-                  widget: "list",
-                  required: false,
-                }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -156,5 +131,3 @@ collections:
                 widget: "image"
                 media_folder: "/image/galeria_doces"
                 public_folder: "/image/galeria_doces"
-
-

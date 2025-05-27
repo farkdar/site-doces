@@ -1,0 +1,28 @@
+{
+  "categorias": [
+    {
+      "id": "bombons",
+      "titulo": "Bombons",
+      "json": "produtos/bombons.json",
+      "ordem": 1
+    },
+    {
+      "id": "presentes",
+      "titulo": "Presentes",
+      "json": "produtos/presentes.json",
+      "ordem": 2
+    },
+    {
+      "id": "festas",
+      "titulo": "Festas",
+      "json": "produtos/festas.json",
+      "ordem": 3
+    },
+    {
+      "id": "pascoa",
+      "titulo": "Páscoa",
+      "json": "produtos/pascoa.json",
+      "ordem": 4
+    }
+  ]
+}

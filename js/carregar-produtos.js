@@ -1,3 +1,31 @@
+async function carregarCategoriasEProdutos() {
+  try {
+    const resposta = await fetch("produtos/categorias.json");
+    const dados = await resposta.json();
+
+    const categoriasOrdenadas = dados.categorias.sort((a, b) => a.ordem - b.ordem);
+
+    for (const categoria of categoriasOrdenadas) {
+      const { id, titulo, json } = categoria;
+
+      // Cria a seção no HTML
+      const secao = document.createElement("section");
+      secao.id = id;
+      secao.innerHTML = `
+        <h2>${titulo}</h2>
+        <p class="aviso-scroll">Arraste para o lado 👉</p>
+        <div class="produtos-container" id="container-${id}"></div>
+      `;
+      document.getElementById("produtos-dinamicos").appendChild(secao);
+
+      // Carrega os produtos da categoria
+      await carregarProdutos(id, `container-${id}`, json);
+    }
+  } catch (erro) {
+    console.error("Erro ao carregar categorias:", erro);
+  }
+}
+
 async function carregarProdutos(categoria, containerId, arquivoJson) {
   try {
     const response = await fetch(arquivoJson);
@@ -42,3 +70,5 @@ async function carregarProdutos(categoria, containerId, arquivoJson) {
     console.error(`Erro ao carregar ${categoria}:`, erro);
   }
 }
+
+document.addEventListener("DOMContentLoaded", carregarCategoriasEProdutos);
