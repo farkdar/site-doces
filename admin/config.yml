@@ -21,13 +21,13 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
                 media_folder: "../image/bombons"
                 public_folder: "/../image/bombons"
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
 
   - name: "presentes"
     label: "Presentes"
@@ -44,13 +44,13 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
                 media_folder: "../image/presentes"
                 public_folder: "/../image/presentes"
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
 
   - name: "festas"
     label: "Festas"
@@ -67,13 +67,13 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
                 media_folder: "../image/festas"
                 public_folder: "/../image/festas"
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
 
   - name: "pascoa"
     label: "Páscoa"
@@ -90,10 +90,10 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
                 media_folder: "../image/pascoa"
                 public_folder: "/../image/pascoa"
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
