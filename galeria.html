@@ -33,7 +33,7 @@
       <p>Veja os doces que encantam nossos clientes!</p>
 
       <div id="galeria-container" class="grid-galeria">
-        <!-- Doces serão inseridos aqui via JavaScript -->
+        <!-- Doces com imagem e nome aparecerão aqui -->
       </div>
     </section>
   </main>
@@ -52,6 +52,7 @@
           card.classList.add("galeria-card");
 
           card.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
             <h3>${item.title}</h3>
           `;
 

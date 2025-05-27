@@ -150,4 +150,10 @@ collections:
             widget: "list"
             label_singular: "Doce"
             fields:
-              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Nome do Doce", name: "title", widget: "string" }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/galeria_doces"
+                public_folder: "/../image/galeria_doces"
+
