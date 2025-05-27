@@ -15,25 +15,25 @@
     {
       "title": "Chocolate Branco",
       "preco": "160,00",
-      "descricao": "Mini copo feito de chocolate meio amargo em formato de coração e recheado com brigadeiro de chocolate branco.",
+      "descricao": "Um cento de mini copo feito de chocolate meio amargo em formato de coração e recheado com brigadeiro de chocolate branco.",
       "image": "/image/Festas/festas-mini-copo-coracao-chocolate-branco.webp"
     },
     {
       "title": "Ninho com Uva",
       "preco": "160,00",
-      "descricao": "Mini copo feito de chocolate meio amargo, recheado com brigadeiro de ninho e decorado com uma uva.",
+      "descricao": "Um cento de mini copo feito de chocolate meio amargo, recheado com brigadeiro de ninho e decorado com uma uva.",
       "image": "/image/Festas/festas-mini-copo-ninho-uva.webp"
     },
     {
       "title": "Mousse de Limão",
       "preco": "160,00",
-      "descricao": "Copo de mousse de limão decorado com raspas de limão.",
+      "descricao": "Um cento de copo de mousse de limão decorado com raspas de limão.",
       "image": "/image/Festas/festas-mousse-limão.webp"
     },
     {
       "title": "Mousse de Maracujá",
       "preco": "160,00",
-      "descricao": "Copo de mousse de maracujá decorado com redução de maracujá.",
+      "descricao": "Um cento de copo de mousse de maracujá decorado com redução de maracujá.",
       "image": "/image/Festas/festas-mousse-maracuja.webp"
     }
   ]
