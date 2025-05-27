@@ -2,8 +2,8 @@
   "categorias": [
     {
       "id": "bombons",
-      "name": "bombons",
-      "titulo": "Bombons",
+      "title": "Bombons",
+      "slug": "bombons",
       "json": "produtos/bombons.json",
       "ordem": 1
     },
