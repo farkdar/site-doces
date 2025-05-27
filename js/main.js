@@ -122,9 +122,8 @@ function enviarPedido() {
         const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
             categoria.toLowerCase().includes("pascoa") ? "🐰" :
                 categoria.toLowerCase().includes("presente") ? "🎁" :
-                    categoria.toLowerCase().includes("bombom") ? "🍫" :
-                        categoria.toLowerCase().includes("doces") ? "🍬" :
-                            "📦";
+                    categoria.toLowerCase().includes("bombom") ? "🍬" :
+                        "📦";
 
         mensagem += `${emoji} *${categoria}*\n`;
         agrupado[categoria].forEach(item => {
