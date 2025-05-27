@@ -80,39 +80,7 @@
     </div>
   </section>
 
-
-
-  <section id="Bombons">
-    <h2>Bombons</h2>
-    <p class="aviso-scroll">Arraste para o lado 👉</p>
-    <div id="produtos-bombons" class="produtos-container"></div>
-  </section>
-
-  <!-- -------------------------------------------------------------- -->
-
-  <section id="Presentes">
-    <h2>Presentes</h2>
-    <p class="aviso-scroll">Arraste para o lado 👉</p>
-    <div id="produtos-presentes" class="produtos-container"></div>
-  </section>
-
-
-  <!-- -------------------------------------------------------------- -->
-
-  <section id="Festas">
-    <h2>Festas</h2>
-    <p class="aviso-scroll">Arraste para o lado 👉</p>
-    <div id="produtos-festas" class="produtos-container"></div>
-  </section>
-
-
-  <!-- -------------------------------------------------------------- -->
-
-  <section id="Pascoa">
-    <h2>Páscoa</h2>
-    <p class="aviso-scroll">Arraste para o lado 👉</p>
-    <div id="produtos-pascoa" class="produtos-container"></div>
-  </section>
+  <div id="produtos-dinamicos"></div>
 
 
   <!-- -------------------------------------------------------------- -->
@@ -173,18 +141,12 @@
       });
     }
   </script>
-  <script src="js/carregar-produtos.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <script src="js/main.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  <script>
-    carregarProdutos("Bombons", "produtos-bombons", "produtos/bombons.json");
-    carregarProdutos("Presentes", "produtos-presentes", "produtos/presentes.json");
-    carregarProdutos("Festas", "produtos-festas", "produtos/festas.json");
-    carregarProdutos("Pascoa", "produtos-pascoa", "produtos/pascoa.json");
-  </script>
-
+  <script src="js/carregar-produtos.js" defer></script>
+  <script src="js/main.js"></script>
 
 
 </body>
