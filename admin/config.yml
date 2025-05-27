@@ -2,12 +2,16 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: https://floridodoces.netlify.app
+editorial_workflow: true
+
 media_folder: "image"
 public_folder: "/image"
 
 collections:
   - name: "bombons"
     label: "Bombons"
+    preview_path: produtos/bombons
     files:
       - file: "produtos/bombons.json"
         label: "Lista de Bombons"
@@ -21,8 +25,7 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Novo?", name: "novo", widget: "boolean", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -31,6 +34,7 @@ collections:
 
   - name: "presentes"
     label: "Presentes"
+    preview_path: produtos/presentes
     files:
       - file: "produtos/presentes.json"
         label: "Lista de Presentes"
@@ -44,8 +48,7 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Novo?", name: "novo", widget: "boolean", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -54,6 +57,7 @@ collections:
 
   - name: "festas"
     label: "Festas"
+    preview_path: produtos/festas
     files:
       - file: "produtos/festas.json"
         label: "Lista de Festas"
@@ -67,8 +71,7 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Novo?", name: "novo", widget: "boolean", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -77,6 +80,7 @@ collections:
 
   - name: "pascoa"
     label: "Páscoa"
+    preview_path: produtos/pascoa
     files:
       - file: "produtos/pascoa.json"
         label: "Lista de Páscoa"
@@ -90,8 +94,7 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Novo?", name: "novo", widget: "boolean", required: false }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
