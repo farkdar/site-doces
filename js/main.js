@@ -101,31 +101,55 @@ function alterarQtd(index, delta) {
 
 
 function enviarPedido() {
-    if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio!");
-        return;
-    }
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio!");
+    return;
+  }
 
-    const mensagem = carrinho
-        .map(item => `• ${item.qtd}x ${item.nome}`)
-        .join("%0A");
+  const agrupado = {};
 
-    const texto = `Olá! Quero fazer um pedido:%0A${mensagem}`;
-    const url = `https://wa.me/554497302139?text=${texto}`;
+  let total = 0;
 
-    // Abre o WhatsApp
-    window.open(url, "_blank");
+  carrinho.forEach(item => {
+    total += item.qtd * item.preco;
+    const cat = item.categoria || "Outros";
+    if (!agrupado[cat]) agrupado[cat] = [];
+    agrupado[cat].push(item);
+  });
 
-    // Limpa o carrinho e redireciona
-    carrinho.length = 0; // esvazia o array
-    salvarCarrinho();    // atualiza o localStorage
-    atualizarCarrinho(); // atualiza a interface
+  let mensagem = "Olá! Quero fazer um pedido:%0A%0A";
 
-    // Redireciona após pequeno delay
-    setTimeout(() => {
-        window.location.href = "agradecimento.html";
-    }, 500); // meio segundo (ajustável)
+  for (const categoria in agrupado) {
+    const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
+                  categoria.toLowerCase().includes("pascoa") ? "🐰" :
+                  categoria.toLowerCase().includes("presente") ? "🎁" :
+                  categoria.toLowerCase().includes("bombom") ? "🍫" :
+                  "📦";
+
+    mensagem += `${emoji} *${categoria}*%0A`;
+
+    agrupado[categoria].forEach(item => {
+      mensagem += `• ${item.qtd}x ${item.nome}%0A`;
+    });
+
+    mensagem += `%0A`;
+  }
+
+  mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
+
+  const url = `https://wa.me/554497302139?text=${mensagem}`;
+  window.open(url, "_blank");
+
+  // Limpa o carrinho
+  carrinho.length = 0;
+  salvarCarrinho();
+  atualizarCarrinho();
+
+  setTimeout(() => {
+    window.location.href = "agradecimento.html";
+  }, 500);
 }
+
 
 function toggleCarrinho() {
     const container = document.getElementById("carrinho-container");
