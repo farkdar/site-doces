@@ -52,6 +52,8 @@ header {
 }
 
 .logo-container {
+  text-decoration: none;
+  color: inherit; /* mantém a cor do texto */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -617,4 +619,29 @@ footer a:hover {
   .aviso-scroll {
     display: block;
   }
+}
+
+.galeria {
+    text-align: center;
+    padding: 2rem;
+    color: #333;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
 }

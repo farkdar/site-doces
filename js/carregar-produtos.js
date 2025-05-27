@@ -11,7 +11,7 @@ async function carregarProdutos(categoria, containerId, arquivoJson) {
       const saboresHTML = Array.isArray(produto.sabores) && produto.sabores.length > 0
         ? `
           <h3>Sabores</h3>
-          <ul class="lista-sabores-2">
+          <ul class="lista-sabores-1">
             ${produto.sabores.map(sabor => `<li>${sabor}</li>`).join('')}
           </ul>
         `
@@ -31,7 +31,7 @@ async function carregarProdutos(categoria, containerId, arquivoJson) {
           <p>${produto.descricao}</p>
           ${saboresHTML}
           <button class="botao-pedir" onclick="adicionarAoCarrinho('${produto.title}', ${produto.preco.replace(',', '.')})">
-            Carrinho
+            Adicionar
           </button>
         </div>
       `;

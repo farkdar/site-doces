@@ -4,153 +4,191 @@
 <!-- Início do documento HTML com idioma português brasileiro -->
 
 <head>
-    <meta charset="UTF-8">
-    <!-- Suporte a caracteres especiais (acentuação, cedilha etc.) -->
+  <meta charset="UTF-8">
+  <!-- Suporte a caracteres especiais (acentuação, cedilha etc.) -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Torna o site responsivo em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Torna o site responsivo em dispositivos móveis -->
 
-    <title>Florido Doces</title>
-    <!-- Título exibido na aba do navegador -->
+  <title>Florido Doces</title>
+  <!-- Título exibido na aba do navegador -->
 
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Conecta o arquivo CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Conecta o arquivo CSS externo -->
 
-    <!-- Importa fonte cursiva do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Importa fonte cursiva do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-    <!-- Importa o Font Awesome via CDN para usar ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Importa o Font Awesome via CDN para usar ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 
 <body>
-    <!-- Corpo do site -->
+  <!-- Corpo do site -->
 
 
-    <!-- Imagem de fundo com opacidade baixa -->
-    <div class="background-image"></div>
+  <!-- Imagem de fundo com opacidade baixa -->
+  <div class="background-image"></div>
 
-    <header>
-        <!-- Cabeçalho principal com logo e nome -->
-        <div class="logo-container">
-            <!-- Container do logo e texto -->
-            <img src="image/elementos/logo.webp" alt="Logo Florido Doces" class="logo">
-            <!-- Imagem do logo -->
-            <h1 class="logo-text">Florido Doces</h1>
-            <!-- Nome com fonte cursiva -->
+  <header>
+    <!-- Cabeçalho principal com logo e nome -->
+    <a href="index.html" class="logo-container">
+      <!-- Container do logo e texto -->
+      <img src="image/elementos/logo.webp" alt="Logo Florido Doces" class="logo">
+      <!-- Imagem do logo -->
+      <h1 class="logo-text">Florido Doces</h1>
+      <!-- Nome com fonte cursiva -->
+    </a>
+
+    <nav>
+      <!-- Menu de navegação para seções -->
+      <a href="index.html">Produtos</a>
+      <a href="contato.html">Contatos</a>
+      <a href="galeria.html">Galeria</a>
+    </nav>
+  </header>
+
+
+  <section id="explicacao">
+    <h2>Como funciona?</h2>
+    <div
+      style="max-width: 700px; margin: auto; text-align: center; padding: 20px; background: #fff8f5; border-radius: 12px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+      <p>👋 Olá! Bem-vindo(a) à nossa loja online.</p>
+      <p>Aqui é muito fácil fazer seu pedido:</p>
+      <ol style="padding-left: 20px;">
+        <div class="produtos-container">
+          <div class="card-flip" onclick="this.classList.toggle('flipped')">
+            <!-- Frente do card -->
+            <div class="card-front">
+              <img src="image/elementos/clique aqui.webp" alt="Brigadeiro">
+              <h3>Explicação</h3>
+              <p>R$ 0,00 por clique</p>
+            </div>
+
+            <!-- Verso do card -->
+            <div class="card-back">
+              <h3>Produto</h3>
+              <p>Aqui aparece a descrição do produto que você quer ver.</p>
+              <p>Ao clicar em "Adicionar", adiciona produto ao carrinho que fica no canto inferior direito.</p>
+              <p>Agora basta clicar no carrinho e finalizar pedido no whatsapp.</p>
+              <button class="botao-pedir">
+                Adicionar
+              </button>
+
+            </div>
+          </div>
         </div>
 
-        <nav>
-            <!-- Menu de navegação para seções -->
-            <a href="index.html">Produtos</a>
-            <a href="contato.html">Contato</a> <!-- ✅ Atualizado para nova página -->
-        </nav>
-    </header>
-    
-    <section id="Bombons">
-      <h2>Bombons</h2>
-      <p class="aviso-scroll">Arraste para o lado 👉</p>
-      <div id="produtos-bombons" class="produtos-container"></div>
-    </section>
-
-    <!-- -------------------------------------------------------------- -->
-    
-    <section id="Presentes">
-      <h2>Presentes</h2>
-      <p class="aviso-scroll">Arraste para o lado 👉</p>
-      <div id="produtos-presentes" class="produtos-container"></div>
-    </section>
-
-
-    <!-- -------------------------------------------------------------- -->
-
-    <section id="Festas">
-      <h2>Festas</h2>
-      <p class="aviso-scroll">Arraste para o lado 👉</p>
-      <div id="produtos-festas" class="produtos-container"></div>
-    </section>
-
-
-    <!-- -------------------------------------------------------------- -->
-
-    <section id="Pascoa">
-      <h2>Páscoa</h2>
-      <p class="aviso-scroll">Arraste para o lado 👉</p>
-      <div id="produtos-pascoa" class="produtos-container"></div>
-    </section>
-
-
-    <!-- -------------------------------------------------------------- -->
-
-    
-    <footer>
-        <p>&copy; 2025 Florido Doces</p>
-
-        <!-- Link com ícone do Instagram usando Font Awesome -->
-        <a href="https://instagram.com/florido_doces" target="_blank">
-            <i class="fab fa-instagram" style="margin-right: 5px;"></i>
-            Instagram
-        </a>
-    </footer>
-
-
-
-    <!-- Script para efeito de fade-in ao carregar a página -->
-    <script>
-        document.body.style.opacity = 0; // começa invisível
-        window.addEventListener("load", () => {
-            document.body.style.transition = "opacity 0.6s"; // define a transição
-            document.body.style.opacity = 1; // revela a página suavemente
-        });
-    </script>
-
-    <!-- Carrinho de compra -->
-    <!-- Botão flutuante para abrir/fechar carrinho -->
-    <button id="abrir-carrinho" onclick="toggleCarrinho()">🛒 Carrinho (<span id="total-itens">0</span>)</button>
-
-    <!-- Carrinho começa oculto -->
-    <div id="carrinho-container" class="oculto">
-        <h3>Seu Carrinho</h3>
-        <ul id="lista-carrinho"></ul>
-        <p><strong>Total: R$ <span id="total-preco">0,00</span></strong></p>
-        <button onclick="enviarPedido()">Finalizar Pedido no WhatsApp</button>
+        <p>🍬 Simples assim! Aproveite nossos sabores com muito carinho e sabor.</p>
     </div>
-
-
-    <!-- Notificação "Produto adicionado" -->
-    <div id="toast-adicionado"> Produto adicionado ao carrinho ✅</div>
+  </section>
 
 
 
-    <!-- Botão flutuante de WhatsApp com ícone do Font Awesome -->
-    <a href="https://wa.me/554497302139" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+  <section id="Bombons">
+    <h2>Bombons</h2>
+    <p class="aviso-scroll">Arraste para o lado 👉</p>
+    <div id="produtos-bombons" class="produtos-container"></div>
+  </section>
+
+  <!-- -------------------------------------------------------------- -->
+
+  <section id="Presentes">
+    <h2>Presentes</h2>
+    <p class="aviso-scroll">Arraste para o lado 👉</p>
+    <div id="produtos-presentes" class="produtos-container"></div>
+  </section>
+
+
+  <!-- -------------------------------------------------------------- -->
+
+  <section id="Festas">
+    <h2>Festas</h2>
+    <p class="aviso-scroll">Arraste para o lado 👉</p>
+    <div id="produtos-festas" class="produtos-container"></div>
+  </section>
+
+
+  <!-- -------------------------------------------------------------- -->
+
+  <section id="Pascoa">
+    <h2>Páscoa</h2>
+    <p class="aviso-scroll">Arraste para o lado 👉</p>
+    <div id="produtos-pascoa" class="produtos-container"></div>
+  </section>
+
+
+  <!-- -------------------------------------------------------------- -->
+
+
+  <footer>
+    <p>&copy; 2025 Florido Doces</p>
+
+    <!-- Link com ícone do Instagram usando Font Awesome -->
+    <a href="https://instagram.com/florido_doces" target="_blank">
+      <i class="fab fa-instagram" style="margin-right: 5px;"></i>
+      Instagram
     </a>
-<!--Script de redirecionamento para login admin-->
-    <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-    <script src="js/carregar-produtos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </footer>
 
-    <script>
-  carregarProdutos("Bombons", "produtos-bombons", "produtos/bombons.json");
-  carregarProdutos("Presentes", "produtos-presentes", "produtos/presentes.json");
-  carregarProdutos("Festas", "produtos-festas", "produtos/festas.json");
-  carregarProdutos("Pascoa", "produtos-pascoa", "produtos/pascoa.json");
-</script>
+
+
+  <!-- Script para efeito de fade-in ao carregar a página -->
+  <script>
+    document.body.style.opacity = 0; // começa invisível
+    window.addEventListener("load", () => {
+      document.body.style.transition = "opacity 0.6s"; // define a transição
+      document.body.style.opacity = 1; // revela a página suavemente
+    });
+  </script>
+
+  <!-- Carrinho de compra -->
+  <!-- Botão flutuante para abrir/fechar carrinho -->
+  <button id="abrir-carrinho" onclick="toggleCarrinho()">🛒 Carrinho (<span id="total-itens">0</span>)</button>
+
+  <!-- Carrinho começa oculto -->
+  <div id="carrinho-container" class="oculto">
+    <h3>Seu Carrinho</h3>
+    <ul id="lista-carrinho"></ul>
+    <p><strong>Total: R$ <span id="total-preco">0,00</span></strong></p>
+    <button onclick="enviarPedido()">Finalizar Pedido no WhatsApp</button>
+  </div>
+
+
+  <!-- Notificação "Produto adicionado" -->
+  <div id="toast-adicionado"> Produto adicionado ao carrinho ✅</div>
+
+
+
+  <!-- Botão flutuante de WhatsApp com ícone do Font Awesome -->
+  <a href="https://wa.me/554497302139" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <!--Script de redirecionamento para login admin-->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script src="js/carregar-produtos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script>
+    carregarProdutos("Bombons", "produtos-bombons", "produtos/bombons.json");
+    carregarProdutos("Presentes", "produtos-presentes", "produtos/presentes.json");
+    carregarProdutos("Festas", "produtos-festas", "produtos/festas.json");
+    carregarProdutos("Pascoa", "produtos-pascoa", "produtos/pascoa.json");
+  </script>
 
 
 

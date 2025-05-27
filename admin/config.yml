@@ -21,8 +21,18 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - {
+                  label: "Produto Novo?",
+                  name: "novo",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "Sabores",
+                  name: "sabores",
+                  widget: "list",
+                  required: false,
+                }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -44,8 +54,18 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - {
+                  label: "Produto Novo?",
+                  name: "novo",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "Sabores",
+                  name: "sabores",
+                  widget: "list",
+                  required: false,
+                }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -67,8 +87,18 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - {
+                  label: "Produto Novo?",
+                  name: "novo",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "Sabores",
+                  name: "sabores",
+                  widget: "list",
+                  required: false,
+                }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
@@ -90,10 +120,53 @@ collections:
               - { label: "Nome", name: "title", widget: "string" }
               - { label: "Preço", name: "preco", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
-              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - {
+                  label: "Produto Novo?",
+                  name: "novo",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "Sabores",
+                  name: "sabores",
+                  widget: "list",
+                  required: false,
+                }
               - label: "Imagem"
                 name: "image"
                 widget: "image"
                 media_folder: "../image/pascoa"
                 public_folder: "/../image/pascoa"
+
+  - name: "doces"
+    label: "Doces Diversos"
+    files:
+      - file: "produtos/doces.json"
+        label: "Lista de Doces"
+        name: "doces"
+        fields:
+          - label: "Doces"
+            name: "items"
+            widget: "list"
+            label_singular: "Doce"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - {
+                  label: "Produto Novo?",
+                  name: "novo",
+                  widget: "boolean",
+                  required: false,
+                }
+              - {
+                  label: "Sabores",
+                  name: "sabores",
+                  widget: "list",
+                  required: false,
+                }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/doces"
+                public_folder: "/../image/doces"
