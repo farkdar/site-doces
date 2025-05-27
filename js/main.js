@@ -118,32 +118,32 @@ function enviarPedido() {
 
     let mensagem = "Olá! Quero fazer um pedido:\n\n";
 
-    for (const categoria in agrupado) {
-        const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
-            categoria.toLowerCase().includes("pascoa") ? "🐰" :
-                categoria.toLowerCase().includes("presente") ? "🎁" :
-                    categoria.toLowerCase().includes("bombom") ? "🍬" :
-                        "📦";
+    const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
+        categoria.toLowerCase().includes("pascoa") ? "🐰" :
+            categoria.toLowerCase().includes("presente") ? "🎁" :
+                categoria.toLowerCase().includes("bombom") ? "🍬" :
+                    "📦";
 
-        mensagem += `${emoji} *${categoria}*\n`;
-        agrupado[categoria].forEach(item => {
-            mensagem += `• ${item.qtd}x ${item.nome}\n`;
-        });
-        mensagem += `\n`;
-    }
 
-    mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
+    mensagem += `${emoji} *${categoria}*\n`;
+    agrupado[categoria].forEach(item => {
+        mensagem += `• ${item.qtd}x ${item.nome}\n`;
+    });
+    mensagem += `\n`;
+}
 
-    const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, "_blank");
+mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
 
-    carrinho.length = 0;
-    salvarCarrinho();
-    atualizarCarrinho();
+const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
+window.open(url, "_blank");
 
-    setTimeout(() => {
-        window.location.href = "agradecimento.html";
-    }, 500);
+carrinho.length = 0;
+salvarCarrinho();
+atualizarCarrinho();
+
+setTimeout(() => {
+    window.location.href = "agradecimento.html";
+}, 500);
 }
 
 
