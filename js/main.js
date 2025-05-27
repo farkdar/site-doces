@@ -22,18 +22,23 @@ function mostrarToast() {
 }
 
 
-function adicionarAoCarrinho(produto, preco = 0) {
-    const existente = carrinho.find(item => item.nome === produto);
+function adicionarAoCarrinho(produto, preco = 0, categoria = "") {
+    const existente = carrinho.find(item => item.nome === produto && item.categoria === categoria);
     if (existente) {
         existente.qtd += 1;
     } else {
-        carrinho.push({ nome: produto, qtd: 1, preco: parseFloat(preco) });
+        carrinho.push({
+            nome: produto,
+            qtd: 1,
+            preco: parseFloat(preco),
+            categoria: categoria
+        });
     }
     atualizarCarrinho();
     salvarCarrinho();
-    console.log("Chamando toast");
     mostrarToast();
 }
+
 
 function atualizarCarrinho() {
     const lista = document.getElementById("lista-carrinho");
@@ -42,28 +47,48 @@ function atualizarCarrinho() {
     let total = 0;
     let totalItens = 0;
 
+    // Agrupar por categoria
+    const agrupado = {};
+
     carrinho.forEach((item, index) => {
         total += item.qtd * item.preco;
         totalItens += item.qtd;
 
-        const li = document.createElement("li");
-        li.innerHTML = `
+        if (!agrupado[item.categoria]) {
+            agrupado[item.categoria] = [];
+        }
+        agrupado[item.categoria].push({ ...item, index });
+    });
+
+    // Gerar elementos por categoria
+    for (const categoria in agrupado) {
+        const items = agrupado[categoria];
+        const precoTotalCategoria = items.reduce((acc, i) => acc + i.qtd * i.preco, 0);
+
+        const titulo = document.createElement("h4");
+        titulo.style.margin = "10px 0 4px";
+        titulo.textContent = `${categoria} R$${precoTotalCategoria.toFixed(2).replace(".", ",")}`;
+        lista.appendChild(titulo);
+
+        items.forEach(({ nome, qtd, index }) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 5px;">
                     <button onclick="event.stopPropagation(); alterarQtd(${index}, -1)">−</button>
-                    <strong>${item.qtd}</strong>
+                    <strong>${qtd}</strong>
                     <button onclick="event.stopPropagation(); alterarQtd(${index}, 1)">+</button>
-
-                    <span>${item.nome}</span>
+                    <span>${nome}</span>
                 </div>
                 <button onclick="event.stopPropagation(); removerDoCarrinho(${index})" style="margin-left: 7px;">✕</button>
-                `;
-
-        lista.appendChild(li);
-    });
+            `;
+            lista.appendChild(li);
+        });
+    }
 
     document.getElementById("total-preco").textContent = total.toFixed(2).replace(".", ",");
     document.getElementById("total-itens").textContent = totalItens;
 }
+
 
 function alterarQtd(index, delta) {
     carrinho[index].qtd += delta;

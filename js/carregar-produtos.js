@@ -30,7 +30,7 @@ async function carregarProdutos(categoria, containerId, arquivoJson) {
           <h3>Composição</h3>
           <p>${produto.descricao}</p>
           ${saboresHTML}
-          <button class="botao-pedir" onclick="adicionarAoCarrinho('${produto.title}', ${produto.preco.replace(',', '.')})">
+          <button class="botao-pedir" onclick="adicionarAoCarrinho('${produto.title}', ${produto.preco.replace(',', '.')}, '${categoria}')">
             Adicionar
           </button>
         </div>
