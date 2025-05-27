@@ -138,12 +138,12 @@ collections:
                 media_folder: "../image/pascoa"
                 public_folder: "/../image/pascoa"
 
-  - name: "doces"
-    label: "Doces Diversos"
+  - name: "galeria_doces"
+    label: "Galeria de Doces"
     files:
-      - file: "produtos/doces.json"
-        label: "Lista de Doces"
-        name: "doces"
+      - file: "produtos/galeria_doces.json"
+        label: "Lista da Galeria de Doces"
+        name: "galeria_doces"
         fields:
           - label: "Doces"
             name: "items"
@@ -151,22 +151,3 @@ collections:
             label_singular: "Doce"
             fields:
               - { label: "Nome", name: "title", widget: "string" }
-              - { label: "Preço", name: "preco", widget: "string" }
-              - { label: "Descrição", name: "descricao", widget: "text" }
-              - {
-                  label: "Produto Novo?",
-                  name: "novo",
-                  widget: "boolean",
-                  required: false,
-                }
-              - {
-                  label: "Sabores",
-                  name: "sabores",
-                  widget: "list",
-                  required: false,
-                }
-              - label: "Imagem"
-                name: "image"
-                widget: "image"
-                media_folder: "../image/doces"
-                public_folder: "/../image/doces"
