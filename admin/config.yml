@@ -26,10 +26,8 @@ collections:
                 widget: "image"
                 media_folder: "../image/bombons"
                 public_folder: "/../image/bombons"
-              - label: "Sabores"
-                name: "sabores"
-                widget: "list"
-                required: false
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
 
   - name: "presentes"
     label: "Presentes"
@@ -51,10 +49,8 @@ collections:
                 widget: "image"
                 media_folder: "../image/presentes"
                 public_folder: "/../image/presentes"
-              - label: "Sabores"
-                name: "sabores"
-                widget: "list"
-                required: false
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
 
   - name: "festas"
     label: "Festas"
@@ -76,10 +72,8 @@ collections:
                 widget: "image"
                 media_folder: "../image/festas"
                 public_folder: "/../image/festas"
-              - label: "Sabores"
-                name: "sabores"
-                widget: "list"
-                required: false
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
 
   - name: "pascoa"
     label: "Páscoa"
@@ -101,7 +95,5 @@ collections:
                 widget: "image"
                 media_folder: "../image/pascoa"
                 public_folder: "/../image/pascoa"
-              - label: "Sabores"
-                name: "sabores"
-                widget: "list"
-                required: false
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false, default: false }
