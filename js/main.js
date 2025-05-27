@@ -118,20 +118,17 @@ function enviarPedido() {
 
     let mensagem = "Olá! Quero fazer um pedido:\n\n";
 
-    for (const categoria in agrupado) {
-        const emoji = categoria.toLowerCase().includes("festa") ? "🎉" :
-            categoria.toLowerCase().includes("pascoa") ? "🐰" :
-                categoria.toLowerCase().includes("presente") ? "🎁" :
-                    categoria.toLowerCase().includes("bombom") ? "🍬" :
-                        "📦"; // <- vai cair aqui
+    function emojiPorCategoria(categoria) {
+        const nome = categoria.toLowerCase();
 
-
-        mensagem += `${emoji} *${categoria}*\n`;
-        agrupado[categoria].forEach(item => {
-            mensagem += `• ${item.qtd}x ${item.nome}\n`;
-        });
-        mensagem += `\n`;
+        if (nome.includes("festa")) return "🎉";
+        if (nome.includes("pascoa")) return "🐰";
+        if (nome.includes("presente")) return "🎁";
+        if (nome.includes("bombom") || nome.includes("bombons")) return "🍬";
+        if (nome.includes("doce")) return ""; // não mostrar emoji p/ doces
+        return "📦"; // fallback
     }
+
 
     mensagem += `💰 *Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
 
