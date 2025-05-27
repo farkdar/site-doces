@@ -154,6 +154,7 @@ collections:
               - label: "Imagem"
                 name: "image"
                 widget: "image"
-                media_folder: "../image/galeria_doces"
-                public_folder: "/../image/galeria_doces"
+                media_folder: "/image/galeria_doces"
+                public_folder: "/image/galeria_doces"
+
 
