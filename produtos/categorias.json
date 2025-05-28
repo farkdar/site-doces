@@ -7,15 +7,15 @@
       "ordem": 1
     },
     {
-      "id": "presentes",
-      "titulo": "Presentes",
-      "json": "produtos/presentes.json",
-      "ordem": 2
-    },
-    {
       "id": "festas",
       "titulo": "Festas",
       "json": "produtos/festas.json",
+      "ordem": 2
+    },
+    {
+      "id": "presentes",
+      "titulo": "Presentes",
+      "json": "produtos/presentes.json",
       "ordem": 3
     },
     {
