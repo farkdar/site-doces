@@ -6,20 +6,24 @@ media_folder: "image"
 public_folder: "/image"
 
 collections:
-  - name: "categorias"
-    label: "Categorias"
-    file: "produtos/categorias.json"
-    fields:
-      - label: "Categorias"
-        name: "categorias"
-        widget: "list"
-        label_singular: "Categoria"
-        summary: "{{titulo}}"
+  - label: "Categorias"
+    name: "categorias"
+    files:
+      - label: "Ordem das Categorias"
+        name: "ordem_categorias"
+        file: "produtos/categorias.json"
         fields:
-          - { label: "ID da Categoria", name: "id", widget: "string" }
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Arquivo JSON", name: "json", widget: "string" }
-          - { label: "Ordem", name: "ordem", widget: "number", value_type: "int" }
+          - label: "Categorias"
+            name: "categorias"
+            widget: "list"
+            label_singular: "Categoria"
+            summary: "{{titulo}}"
+            fields:
+              - { label: "ID da Categoria", name: "id", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Arquivo JSON", name: "json", widget: "string" }
+              - { label: "Ordem", name: "ordem", widget: "number", value_type: "int" }
+
 
 
   - name: "bombons"
