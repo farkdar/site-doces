@@ -23,6 +23,12 @@
       "titulo": "Páscoa",
       "json": "produtos/pascoa.json",
       "ordem": 4
+    },
+    {
+      "id": "teste",
+      "titulo": "Teste",
+      "json": "produtos/teste.json",
+      "ordem": 5
     }
   ]
 }
