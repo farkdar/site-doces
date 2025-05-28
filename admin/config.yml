@@ -6,7 +6,7 @@ media_folder: "image"
 public_folder: "/image"
 
 collections:
-  - label: "Categorias"
+  - label: "Ordem das Categorias"
     name: "categorias"
     files:
       - label: "Ordem das Categorias"
