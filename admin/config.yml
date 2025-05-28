@@ -21,6 +21,7 @@ collections:
           - { label: "Arquivo JSON", name: "json", widget: "string" }
           - { label: "Ordem", name: "ordem", widget: "number", value_type: "int" }
 
+
   - name: "bombons"
     label: "Bombons"
     files:
