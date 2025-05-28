@@ -101,47 +101,56 @@ function alterarQtd(index, delta) {
 
 
 function enviarPedido() {
-  if (carrinho.length === 0) {
-    alert("Seu carrinho está vazio!");
-    return;
-  }
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
 
-  const agrupado = {};
-  let total = 0;
+    const agrupado = {};
+    const totaisPorCategoria = {};
+    let totalGeral = 0;
 
-  carrinho.forEach(item => {
-    total += item.qtd * item.preco;
-    const cat = item.categoria || "Outros";
-    if (!agrupado[cat]) agrupado[cat] = [];
-    agrupado[cat].push(item);
-  });
+    carrinho.forEach(item => {
+        const categoria = item.categoria || "Outros";
+        if (!agrupado[categoria]) agrupado[categoria] = [];
 
-  let mensagem = "Olá! Quero fazer um pedido:\n\n";
+        agrupado[categoria].push(item);
 
-  for (const categoria in agrupado) {
-    // pular categorias com "doce" no nome
-    if (categoria.toLowerCase().includes("doce")) continue;
-
-    mensagem += `*${categoria}*\n`;
-    agrupado[categoria].forEach(item => {
-      mensagem += `• ${item.qtd}x ${item.nome}\n`;
+        const subtotal = item.qtd * item.preco;
+        totaisPorCategoria[categoria] = (totaisPorCategoria[categoria] || 0) + subtotal;
+        totalGeral += subtotal;
     });
-    mensagem += `\n`;
-  }
 
-  mensagem += `*Total: R$ ${total.toFixed(2).replace(".", ",")}*`;
+    let mensagem = "Olá! Quero fazer um pedido:\n\n";
 
-  const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, "_blank");
+    for (const categoria in agrupado) {
+        // Ignora categorias com "doce" no nome
+        if (categoria.toLowerCase().includes("doce")) continue;
 
-  carrinho.length = 0;
-  salvarCarrinho();
-  atualizarCarrinho();
+        const totalCategoria = totaisPorCategoria[categoria];
+        mensagem += `*${categoria} R$ ${totalCategoria.toFixed(2).replace(".", ",")}*\n`;
 
-  setTimeout(() => {
-    window.location.href = "agradecimento.html";
-  }, 500);
+        agrupado[categoria].forEach(item => {
+            mensagem += `- ${item.qtd}x ${item.nome}\n`;
+        });
+
+        mensagem += `\n`;
+    }
+
+    mensagem += `*Total: R$ ${totalGeral.toFixed(2).replace(".", ",")}*`;
+
+    const url = `https://wa.me/554497302139?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+
+    carrinho.length = 0;
+    salvarCarrinho();
+    atualizarCarrinho();
+
+    setTimeout(() => {
+        window.location.href = "agradecimento.html";
+    }, 500);
 }
+
 
 
 
