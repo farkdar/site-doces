@@ -1,0 +1,138 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "image"
+public_folder: "/image"
+
+collections:
+  - label: "Categorias"
+    name: "categorias"
+    files:
+      - label: "Ordem das Categorias"
+        name: "ordem_categorias"
+        file: "produtos/categorias.json"
+        fields:
+          - label: "Categorias"
+            name: "categorias"
+            widget: "list"
+            label_singular: "Categoria"
+            summary: "{{titulo}}"
+            fields:
+              - { label: "ID da Categoria", name: "id", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Arquivo JSON", name: "json", widget: "string" }
+              - { label: "Ordem", name: "ordem", widget: "number", value_type: "int" }
+
+
+
+  - name: "bombons"
+    label: "Bombons"
+    files:
+      - file: "produtos/bombons.json"
+        label: "Lista de Bombons"
+        name: "bombons"
+        fields:
+          - label: "Bombons"
+            name: "items"
+            widget: "list"
+            label_singular: "Bombom"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/bombons"
+                public_folder: "/../image/bombons"
+
+  - name: "presentes"
+    label: "Presentes"
+    files:
+      - file: "produtos/presentes.json"
+        label: "Lista de Presentes"
+        name: "presentes"
+        fields:
+          - label: "Presentes"
+            name: "items"
+            widget: "list"
+            label_singular: "Presente"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/presentes"
+                public_folder: "/../image/presentes"
+
+  - name: "festas"
+    label: "Festas"
+    files:
+      - file: "produtos/festas.json"
+        label: "Lista de Festas"
+        name: "festas"
+        fields:
+          - label: "Festas"
+            name: "items"
+            widget: "list"
+            label_singular: "Item de Festa"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/festas"
+                public_folder: "/../image/festas"
+
+  - name: "pascoa"
+    label: "Páscoa"
+    files:
+      - file: "produtos/pascoa.json"
+        label: "Lista de Páscoa"
+        name: "pascoa"
+        fields:
+          - label: "Páscoa"
+            name: "items"
+            widget: "list"
+            label_singular: "Produto de Páscoa"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/pascoa"
+                public_folder: "/../image/pascoa"
+
+  - name: "galeria_doces"
+    label: "Galeria de Doces"
+    files:
+      - file: "produtos/galeria_doces.json"
+        label: "Lista da Galeria de Doces"
+        name: "galeria_doces"
+        fields:
+          - label: "Doces"
+            name: "items"
+            widget: "list"
+            label_singular: "Doce"
+            fields:
+              - { label: "Nome do Doce", name: "title", widget: "string" }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "/image/galeria_doces"
+                public_folder: "/image/galeria_doces"
