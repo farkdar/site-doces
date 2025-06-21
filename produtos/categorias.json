@@ -7,22 +7,34 @@
       "ordem": 1
     },
     {
+      "id": "pote",
+      "titulo": "Doces no pote",
+      "json": "produtos/pote.json",
+      "ordem": 2
+    },
+    {
       "id": "festas",
       "titulo": "Festas",
       "json": "produtos/festas.json",
-      "ordem": 2
+      "ordem": 3
     },
     {
       "id": "presentes",
       "titulo": "Presentes",
       "json": "produtos/presentes.json",
-      "ordem": 3
+      "ordem": 4
     },
     {
       "id": "pascoa",
       "titulo": "Páscoa",
       "json": "produtos/pascoa.json",
-      "ordem": 4
+      "ordem": 5
+    },
+    {
+      "id": "natal",
+      "titulo": "Natal",
+      "json": "produtos/natal.json",
+      "ordem": 6
     }
   ]
 }
