@@ -3,7 +3,7 @@
     {
       "title": "Ovo Tradicional",
       "preco": "40,00",
-      "descricao": "Ovo de páscoa tradicional com uma surpresa dentro.",
+      "descricao": "Ovo de páscoa tradicional com surpresa dentro (batom e tortuguita).",
       "image": "/image/Pascoa/pascoa-ovo-fechado.webp",
       "sabores": [
         "Meio amargo",
@@ -32,11 +32,13 @@
       "sabores": [
         "Brigadeiro",
         "Beijinho",
-        "Ninho",
+        "Kinder Bueno",
         "Kit Kat",
+        "Maracujá",
+        "Ninho",
+        "Ninho com Nutella",
         "Oreo",
-        "Uva Verde",
-        "Maracujá"
+        "Uva Verde"
       ],
       "extra": {
         "label": "Sabor final",
@@ -58,33 +60,27 @@
       "image": "/image/Pascoa/pascoa-ovo-ninho-nutella.webp"
     },
     {
-      "title": "Ovo Ninho com Nutella",
-      "preco": "75,00",
-      "descricao": "Um dos favoritos! Camadas de brigadeiro de ninho e Nutella com casca crocante.",
-      "image": "/image/pascoa/ovo-ninho-nutella.webp",
-      "sabores": [
-        "Ninho",
-        "Nutella",
-        "Chocolate ao leite",
-        "Confeitos crocantes"
-      ]
-    },
-    {
       "title": "Ovo Kinder Bueno",
       "preco": "73,00",
-      "descricao": "Ovo de colher (±450g) com casca de chocolate meio amargo, recheado com brigadeiro de ninho, Nutella e pedaços de Kinder Bueno White.",
-      "image": "/image/Pascoa/pascoa-ovo-kinder-bueno.webp"
+      "descricao": "Um dos favoritos! Casca de chocolate meio amargo, recheado com brigadeiro de ninho, uma deliciosa camada de Nutella e pedaços de Kinder Bueno White. ",
+      "image": "/image/pascoa/img_20250309_171401.jpg",
+      "sabores": []
     },
     {
-      "title": "Ovo Sensação",
-      "preco": "72,00",
-      "descricao": "Ovo de colher (±450g) com casca de chocolate ao leite recheada com brigadeiro e geleia de morango artesanal.",
-      "image": "/image/pascoa/ovo-sensacao.webp",
+      "title": "Ovo de colher unitário (200g)",
+      "preco": "30,00",
+      "descricao": "Ovo de colher (200g) com casca de chocolate meio amargo, recheado com o sabor de sua preferência. ",
+      "image": "/image/Pascoa/pascoa-ovo-kinder-bueno.webp",
       "sabores": [
         "Brigadeiro",
-        "Morango",
-        "Chocolate ao leite",
-        "Granulado belga"
+        "Beijinho",
+        "Kinder Bueno",
+        "Kit Kat",
+        "Maracujá",
+        "Ninho",
+        "Ninho com Nutella",
+        "Oreo",
+        "Uva Verde."
       ]
     }
   ]
