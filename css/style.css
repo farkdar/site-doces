@@ -111,7 +111,7 @@ nav a {
 .card-flip {
   flex: 0 0 auto;
   width: 200px;
-  height: 280px;
+  height: 330px;    /* de 280px → 330px */
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -152,7 +152,8 @@ nav a {
 }
 .card-front img {
   width: 100%;
-  height: auto;
+  max-height: 50%;      /* permite até metade da altura do card */
+  object-fit: cover;    /* mantém proporção sem distorcer */
   border-radius: 5px;
   background: #fff8f5;
 }
@@ -345,7 +346,7 @@ footer {
 
   .card-flip {
     min-width: 160px;
-    height: 240px;
+    height: 300px;      /* de 240px → 300px */
     flex-shrink: 0;
   }
 
