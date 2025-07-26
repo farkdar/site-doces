@@ -634,22 +634,28 @@ footer a:hover {
     color: #333;
 }
 
+/* substitua todo o bloco .grid-galeria { … } por isto: */
 .grid-galeria {
-  display: grid;
-  /* repete colunas de no mínimo 220px, mas expande até preencher o espaço */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  /* cada linha pode ter altura diferente, conforme o conteúdo */
-  grid-auto-rows: auto;
-  /* garante que o conteúdo comece sempre no topo da célula */
-  align-items: start;
-  gap: 1rem;
+  /* define quantas colunas você quer: aqui 3, mas ajuste conforme sua preferência */
+  column-count: 3;
+  column-gap: 1rem;        /* espaçamento horizontal entre colunas */
   padding: 2rem 0;
 }
 
+/* as imagens fluem verticalmente em cada coluna */
 .grid-galeria img {
+  /* ocupam 100% da largura da coluna */
   width: 100%;
   height: auto;
-  display: block;    /* remove qualquer espaço extra */
+  display: inline-block;   /* necessário para respeitar column-break */
+  margin-bottom: 1rem;     /* espaçamento vertical entre itens */
+  break-inside: avoid;     /* evita quebrar uma imagem entre colunas */
+}
+
+@media (max-width: 600px) {
+  .grid-galeria {
+    column-count: 1;       /* faz as imagens irem numa única coluna */
+  }
 }
 
 
