@@ -7,9 +7,9 @@
       "ordem": 1
     },
     {
-      "id": "pote",
+      "id": "doces_no_pote",
       "titulo": "Doces no pote",
-      "json": "produtos/pote.json",
+      "json": "produtos/doces_no_pote.json",
       "ordem": 2
     },
     {
