@@ -118,6 +118,52 @@ collections:
                 media_folder: "../image/pascoa"
                 public_folder: "/../image/pascoa"
 
+  - name: "doces_no_pote"
+    label: "Doces no Pote"
+    files:
+      - file: "produtos/doces_no_pote.json"
+        label: "Lista de Doces no Pote"
+        name: "doces_no_pote"
+        fields:
+          - label: "Doces no Pote"
+            name: "items"
+            widget: "list"
+            label_singular: "Produto no Pote"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/doces_no_pote"
+                public_folder: "/../image/doces_no_pote"
+
+  - name: "natal"
+    label: "Natal"
+    files:
+      - file: "produtos/natal.json"
+        label: "Lista de Natal"
+        name: "natal"
+        fields:
+          - label: "Natal"
+            name: "items"
+            widget: "list"
+            label_singular: "Produto de Natal"
+            fields:
+              - { label: "Nome", name: "title", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Produto Novo?", name: "novo", widget: "boolean", required: false }
+              - { label: "Sabores", name: "sabores", widget: "list", required: false }
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                media_folder: "../image/natal"
+                public_folder: "/../image/natal"
+
   - name: "galeria_doces"
     label: "Galeria de Doces"
     files:
