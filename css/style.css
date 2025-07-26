@@ -635,19 +635,23 @@ footer a:hover {
 }
 
 .grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    padding: 2rem 0;
+  display: grid;
+  /* repete colunas de no mínimo 220px, mas expande até preencher o espaço */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* cada linha pode ter altura diferente, conforme o conteúdo */
+  grid-auto-rows: auto;
+  /* garante que o conteúdo comece sempre no topo da célula */
+  align-items: start;
+  gap: 1rem;
+  padding: 2rem 0;
 }
 
 .grid-galeria img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;    /* remove qualquer espaço extra */
 }
+
 
 .grid-galeria img:hover {
     transform: scale(1.05);
