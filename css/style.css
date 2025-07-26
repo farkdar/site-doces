@@ -637,20 +637,29 @@ footer a:hover {
 
 .grid-galeria {
   /* define quantas colunas você quer */
-  column-count: 5;
+  column-count: 4;
   column-gap: 1rem;        /* espaçamento horizontal entre colunas */
   padding: 2rem 0;
 }
 
 /* as imagens fluem verticalmente em cada coluna */
 .grid-galeria img {
-  /* ocupam 90% da largura da coluna */
-  width: 90%;
+  /* ocupam 95% da largura da coluna */
+  width: 95%;
   height: auto;
   display: inline-block;   /* necessário para respeitar column-break */
   margin-bottom: 1rem;     /* espaçamento vertical entre itens */
   break-inside: avoid;     /* evita quebrar uma imagem entre colunas */
+  /* bordas arredondadas */
+  border-radius: 12px;
 }
+
+@media (max-width: 600px) {
+  .grid-galeria {
+    column-count: 2;       /* faz as imagens irem numa única coluna */
+  }
+}
+
 
 .grid-galeria img:hover {
     transform: scale(1.05);
