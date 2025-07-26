@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "title": "Produto 1",
+      "preco": "00,00",
+      "descricao": "Produto 1",
+      "novo": true,
+      "sabores": [
+        "produto1",
+        "produto2",
+        "produto3"
+      ],
+      "image": "/image/doces_no_pote/bombons-beijinho.webp"
+    }
+  ]
+}
