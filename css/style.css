@@ -339,13 +339,13 @@ footer {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    gap: 8px;
+    gap: 7px;
     padding: 10px;
   }
 
   .card-flip {
-    min-width: 140px;
-    height: 260px;
+    min-width: 120px;
+    height: 240px;
     flex-shrink: 0;
   }
 
