@@ -344,7 +344,7 @@ footer {
   }
 
   .card-flip {
-    min-width: 140px;
+    min-width: 120px;
     height: 240px;
     flex-shrink: 0;
   }
