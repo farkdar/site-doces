@@ -339,7 +339,7 @@ footer {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    gap: 8px;
+    gap: 5px;
     padding: 10px;
   }
 
